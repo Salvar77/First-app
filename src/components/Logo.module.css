@@ -1,0 +1,8 @@
+.logo {
+	position: fixed;
+	top: 1rem;
+	left: 2rem;
+	max-height: 50px;
+	width: auto;
+	z-index: 500;
+}
