@@ -1,0 +1,108 @@
+@import "../styles/colors";
+
+.aboutMe {
+	background-color: $white-smooth;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__boxText {
+		// text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__info {
+		font-family: "Alkatra";
+		font-size: 1rem;
+		color: $dark-smooth;
+		padding: 2rem;
+		margin: 0 auto;
+	}
+	&__img {
+		max-width: 100%;
+		// height: auto;
+		padding: 1rem 1rem;
+	}
+
+	&__btn {
+		font-family: "Alkatra";
+		display: inline-block;
+		width: auto;
+		// text-align: center;
+		margin: 0 auto;
+		padding: 1.6rem 3.2rem;
+		font-size: 1.6rem;
+		transition: background-color 0.3s;
+		border-radius: 0.6rem;
+		// opacity: 0.6;
+		color: $white-smooth;
+		background-color: $dark-smooth;
+		box-shadow: 0.4rem 0.6rem 0.8rem;
+		// border: none;
+		transition: 0.5s;
+		text-decoration: none;
+
+		&:hover {
+			box-shadow: 0.6rem 0.8rem 0 0 rgba(175, 23, 23, 0.8),
+				inset 0.8rem 0.4rem 0.8rem rgba(239, 112, 112, 0.711);
+		}
+	}
+}
+
+.aboutMe__img img {
+	object-fit: cover; // to sprawi, że obrazek zachowa swoje proporcje
+	height: 100%; // zajmuje 100% dostępnej wysokości kontenera
+}
+
+.sectionHeading {
+	font-size: 2rem;
+	text-align: center;
+	color: $dark-smooth;
+	padding: 1rem;
+}
+
+.links {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+
+	a {
+		color: $dark-smooth; // przykładowy kolor, dostosuj do swoich potrzeb
+		font-size: 1.5rem; // wielkość ikony
+		transition: color 0.3s;
+
+		&:hover {
+			color: $white-smooth; // kolor po najechaniu
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.aboutMe {
+		flex-direction: row;
+		align-items: stretch;
+		gap: 2rem;
+		&__img {
+			width: 30rem; // Przykładowa wartość
+			max-width: none;
+			margin-left: 2rem;
+		}
+
+		&__boxText {
+			flex-direction: column;
+		}
+
+		&__info {
+			font-size: 1.8rem;
+		}
+	}
+
+	.sectionHeading {
+		font-size: 2.6rem;
+		text-align: center;
+		color: $dark-smooth;
+		padding: 1rem;
+	}
+}

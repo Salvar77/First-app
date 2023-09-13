@@ -1,0 +1,88 @@
+
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* background-color: rgba(0, 0, 0, 0.5); Czarne tło z półprzezroczystością */
+	z-index: 100; /* Upewnij się, że z-index jest odpowiednio wysoki, ale niższy niż nawigacja */
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	/* width: 100%; */
+	background-color: rgb(77, 61, 61);
+	z-index: 400;
+	transform: translateX(100%);
+	transition: transform 0.3s ease-in-out;
+}
+
+.nav.show {
+    top: 5rem; /* resetuje przesunięcie górne */
+    transform: translateX(0);
+    width: 100%;
+    max-height: 40%;
+    display: flex;
+    flex-direction: column; /* układa elementy nawigacyjne pionowo */
+    justify-content: center; /* wyśrodkowanie wertykalne */
+    align-items: center; /* wyśrodkowanie horyzontalne */
+	/* overflow-y: auto; */
+}
+
+.nav.desktop {
+	transform: translateX(0); /* Pokazuje menu na dużych ekranach */
+	/* ... pozostałe style dla dużych ekranów */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie horyzontalne */
+    justify-content: center; /* Wyśrodkowanie wertykalne */
+    /* height: auto; ustawia wysokość na auto */
+    /* width: 100%; pozwala na pełne wykorzystanie dostępnej szerokości */
+	padding: 1rem 0;
+}
+
+.nav ul li {
+    margin: 1rem 0; /* dodaje marginesy na górze i na dole każdego elementu li, przesuwając je w dół */
+    color: white;
+}
+
+
+@media only screen and (min-width: 501px) {
+	.nav {
+		width: 20%;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	.nav {
+		transform: translateX(100%);
+		width: 100%;
+		height: auto; 
+		/* background-color: transparent; lub dowolny kolor, który chcesz */
+		flex-direction: row;
+		align-items: center;
+		position: fixed; /* zamiast fixed */
+	}
+
+	.nav ul {
+		flex-direction: row;
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav ul li {
+		margin-top: 1.6rem; 
+		margin-right: 2rem;
+	}
+
+}

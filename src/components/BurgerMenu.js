@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import Nav from "./Nav";
 import classes from "./BurgerMenu.module.css";
+import Link from "next/link";
 
 const BurgerMenu = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -30,11 +32,7 @@ const BurgerMenu = (props) => {
 		setIsOpen(!isOpen);
 	};
 
-	let navClasses =
-		windowWidth >= 992 ? `${classes.nav} ${classes.desktop}` : classes.nav;
-	if (isOpen) {
-		navClasses = `${classes.nav} ${classes.show}`;
-	}
+	
 
 	return (
 		<div>
@@ -44,24 +42,15 @@ const BurgerMenu = (props) => {
 			>
 				{isOpen ? "✕" : "☰"}
 			</button>
+			<div className={classes.rightIcons}>
+				<Link href="/shop">
+					<span className="material-symbols-outlined">shopping_cart</span>
+				</Link>
+				<span className="material-symbols-outlined">person</span>
+			</div>
+
 			{/* Usuwam {isOpen && (<> ... </>)} */}
-			<div className={classes.overlay} onClick={toggleMenu}></div>
-			<nav className={navClasses}>
-				<ul>
-					<li>
-						<a href="/">Strona główna</a>
-					</li>
-					<li>
-						<a href="/about">O mnie</a>
-					</li>
-					<li>
-						<a href="/price">Kursy</a>
-					</li>
-					<li>
-						<a href="/price">Sklep</a>
-					</li>
-				</ul>
-			</nav>
+			<Nav isOpen={isOpen} toggleMenu={toggleMenu} windowWidth={windowWidth} />
 		</div>
 	);
 };
