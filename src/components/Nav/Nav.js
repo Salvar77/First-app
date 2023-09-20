@@ -1,7 +1,7 @@
+import Link from "next/link";
 import classes from "./Nav.module.css";
 
 const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
-	
 	let navClasses =
 		windowWidth >= 992 ? `${classes.nav} ${classes.desktop}` : classes.nav;
 	if (isOpen) {
@@ -10,23 +10,23 @@ const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
 
 	return (
 		<div>
-			<div className={classes.overlay} onClick={toggleMenu}></div>
-			<nav className={navClasses}>
+			<div className={isOpen ? classes.overlay : ''} onClick={toggleMenu}></div>
+			<nav className={navClasses} onClick={(e) => e.stopPropagation()}>
 				<ul>
 					<li>
-						<a href="/">Strona główna</a>
+						<Link href="/#hero">Strona główna</Link>
 					</li>
 					<li>
-						<a href="/about">O mnie</a>
+						<Link href="/#aboutMe">O mnie</Link>
 					</li>
 					<li>
-						<a href="/courses">Kursy</a>
+						<Link href="/#courses">Kursy</Link>
 					</li>
 					<li>
-						<a href="/shop">Sklep</a>
+						<Link href="/#shop">Sklep</Link>
 					</li>
 					<li>
-						<a href="/contact">Kontakt</a>
+						<Link href="/#contact">Kontakt</Link>
 					</li>
 				</ul>
 			</nav>

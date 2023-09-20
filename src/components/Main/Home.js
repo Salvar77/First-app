@@ -1,10 +1,10 @@
 import Image from "next/image";
-import styles from "@/components/Home.module.scss";
+import styles from '../Main/Home.module.scss';
 
 export default function Home() {
 	return (
 		<main>
-			<div className={styles.aboutMe}>
+			<section id="aboutMe" className={styles.aboutMe}>
 				<div>
 					<Image
 						className={styles.aboutMe__img}
@@ -56,7 +56,7 @@ export default function Home() {
 						</a>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 	);
 }

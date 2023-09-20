@@ -1,10 +1,12 @@
-@import "../styles/colors";
+@import "../../styles/colors";
 
 .aboutMe {
-	background-color: $white-smooth;
+	background-color: $main-color;
+	padding: 1rem 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	z-index: 20;
 
 	&__boxText {
 		// text-align: center;
@@ -16,7 +18,7 @@
 	&__info {
 		font-family: "Alkatra";
 		font-size: 1rem;
-		color: $dark-smooth;
+		color: $white-smooth;
 		padding: 2rem;
 		margin: 0 auto;
 	}
@@ -52,14 +54,18 @@
 }
 
 .aboutMe__img img {
-	object-fit: cover; // to sprawi, że obrazek zachowa swoje proporcje
-	height: 100%; // zajmuje 100% dostępnej wysokości kontenera
+	object-fit: cover; 
+	// height: 100%; // zajmuje 100% dostępnej wysokości kontenera
 }
+
+// .aboutMe, .aboutMe * {
+//     border: 1px solid red; // Tylko do celów diagnostycznych
+// }
 
 .sectionHeading {
 	font-size: 2rem;
 	text-align: center;
-	color: $dark-smooth;
+	color: $white-smooth;
 	padding: 1rem;
 }
 
@@ -69,12 +75,12 @@
 	margin-top: 1rem;
 
 	a {
-		color: $dark-smooth; // przykładowy kolor, dostosuj do swoich potrzeb
-		font-size: 1.5rem; // wielkość ikony
+		color: $dark-smooth; 
+		font-size: 1.5rem; 
 		transition: color 0.3s;
 
 		&:hover {
-			color: $white-smooth; // kolor po najechaniu
+			color: $white-smooth; 
 		}
 	}
 }
@@ -82,8 +88,9 @@
 @media (min-width: 768px) {
 	.aboutMe {
 		flex-direction: row;
-		align-items: stretch;
+		align-items: center;
 		gap: 2rem;
+
 		&__img {
 			width: 30rem; // Przykładowa wartość
 			max-width: none;
@@ -95,14 +102,14 @@
 		}
 
 		&__info {
-			font-size: 1.8rem;
+			font-size: 1.4rem;
+			margin-right: 1rem;
 		}
 	}
 
 	.sectionHeading {
 		font-size: 2.6rem;
 		text-align: center;
-		color: $dark-smooth;
-		padding: 1rem;
+		margin-right: 1rem;
 	}
 }

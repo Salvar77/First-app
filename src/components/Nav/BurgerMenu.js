@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Nav from "./Nav";
 import classes from "./BurgerMenu.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const BurgerMenu = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +33,6 @@ const BurgerMenu = (props) => {
 		setIsOpen(!isOpen);
 	};
 
-	
-
 	return (
 		<div>
 			<button
@@ -44,9 +43,9 @@ const BurgerMenu = (props) => {
 			</button>
 			<div className={classes.rightIcons}>
 				<Link href="/shop">
-					<span className="material-symbols-outlined">shopping_cart</span>
+					<Image src="/shopping-cart.svg" alt="Koszyk" width={24} height={24} />
 				</Link>
-				<span className="material-symbols-outlined">person</span>
+				<Image src="/account-person.svg" alt="Profil" width={24} height={24} />
 			</div>
 
 			{/* Usuwam {isOpen && (<> ... </>)} */}

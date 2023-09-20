@@ -1,5 +1,5 @@
-@import "../styles/_colors.scss";
-@import "../styles/mixins";
+@import "../../styles/colors";
+@import "../../styles/mixins";
 
 .hero {
 	position: relative;
@@ -14,18 +14,6 @@
 	@include heroImages("/Hero_640.jpg", "/Hero_1920.jpg");
 }
 
-// .heroImage {
-//     display: block;
-//     max-width: 100%;
-//     height: auto;
-//     width: 100vw;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     object-fit: cover; /* ważne, aby obraz był odpowiednio przycięty i rozciągnięty */
-
-// }
 
 .textOverlay {
 	position: absolute;
