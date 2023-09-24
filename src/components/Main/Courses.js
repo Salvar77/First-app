@@ -35,7 +35,6 @@ const Courses = () => {
 					<button className={classes.courses__btn}>Click</button>
 				</div>
 			</div>
-
 		</section>
 	);
 };
