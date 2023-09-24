@@ -25,5 +25,9 @@
         border: 1px solid black;
         background-color: $secondary-color;
         color: $white-smooth;
+
+        &:hover {
+            background-color: $secondary-color-hover;
+        }
     }
 };
