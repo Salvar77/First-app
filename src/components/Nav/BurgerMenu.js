@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const BurgerMenu = (props) => {
+	
 	const [isOpen, setIsOpen] = useState(false);
 	const [windowWidth, setWindowWidth] = useState(
 		typeof window !== "undefined" ? window.innerWidth : 0

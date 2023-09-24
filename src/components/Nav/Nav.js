@@ -2,6 +2,7 @@ import Link from "next/link";
 import classes from "./Nav.module.css";
 
 const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
+	
 	let navClasses =
 		windowWidth >= 992 ? `${classes.nav} ${classes.desktop}` : classes.nav;
 	if (isOpen) {

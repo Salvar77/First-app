@@ -26,7 +26,7 @@ const Hero = () => {
   
 
 	return (
-		<div id="hero" className={classes.hero}>
+		<section id="hero" className={classes.hero}>
 			<div className={classes.textOverlay}>
 				<h1>Tarot, Duchowość, Coaching</h1>
 				<p>
@@ -34,7 +34,7 @@ const Hero = () => {
 				</p>
 				<Link href="#courses" className={classes.button}>Kursy</Link>
 			</div>
-		</div>
+		</section>
 	);
 };
 

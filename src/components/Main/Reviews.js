@@ -8,12 +8,12 @@ const Review = ({ imgSrc, alt, text, name }) => {
 			<div className={classes.reviews__boxImg}>
 				<img src={imgSrc} alt={alt} />
 			</div>
-			<div className="reviews__box-info">
+			<div className={classes.reviews__boxInfo}>
 				<div className={classes.reviews__boxQuote}>
 					<i className="fas fa-quote-right"></i>
 				</div>
 				<p className={classes.reviews__boxText}>{text}</p>
-				<strong>{name}</strong>
+				<strong className={classes.reviews__strong}>{name}</strong>
 			</div>
 		</div>
 	);

@@ -4,14 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $main-too-color;
 
     &__header {
         padding: 2rem;
+        color: $white-smooth;
     }
 
     &__text {
         font-size: 1.4rem;
         margin: 1rem 0;
+        color: $white-smooth;
     }
 
     &__btn {
@@ -20,6 +23,7 @@
         // width: 100%;
         border-radius: 1rem;
         border: 1px solid black;
-        background-color: $white-smooth;
+        background-color: $secondary-color;
+        color: $white-smooth;
     }
 };

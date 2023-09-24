@@ -10,6 +10,7 @@
 	width: 100%;
     padding: 1rem;
 	flex-wrap: wrap;
+	transition: transform 1s;
 
 	@include heroImages("/sky-640.jpg", "/sky-1920.jpg");
 
@@ -29,14 +30,23 @@
 		border-radius: 1.4rem;
 		padding: 1rem;
 		font-size: 1rem;
-		background-color: black;
+		background-color: $dark-smooth;
 		color: white;
+
+		&:hover {
+           background-color: $dark-smooth-hover;
+        }
 	}
 
 	&__img {
 		padding-top: 1rem;
         max-width: 100%;
         border-radius: 2rem;
+		transition: transform .3s;
+
+		&:hover {
+            transform: scale(0.9);
+        }
 	}
 }
 

@@ -27,6 +27,12 @@
     &__img {
         max-width: 100%;
         border-radius: 2rem;
+        transition: transform .3s;
+
+
+        &:hover {
+            transform: scale(0.9);
+        }
 
         Image {
             border-radius: 2rem;
@@ -40,6 +46,10 @@
 		font-size: 1rem;
 		background-color: $secondary-color;
 		color: $white-smooth;
+
+        &:hover {
+            opacity: 0.8;
+        }
 	}
 }
 
