@@ -1,0 +1,52 @@
+@import "../../styles/colors";
+
+.sessions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 1rem;
+    padding: 1rem;
+    background-color: $main-color;
+
+    h2 {
+        color: $white-smooth;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    &__text {
+        text-align: center;
+        color: $white-smooth;
+        padding: 0.6rem;
+    }
+
+    &__img {
+        max-width: 100%;
+        border-radius: 2rem;
+
+        Image {
+            border-radius: 2rem;
+        }
+    }
+
+    &__btn {
+		width: 100%;
+		border-radius: 1.4rem;
+		padding: 1rem;
+		font-size: 1rem;
+		background-color: $secondary-color;
+		color: $white-smooth;
+	}
+}
+
+@media (min-width: 768px) {
+    .sessions {
+        &__box {
+            flex-direction: row;
+        }
+    }
+}

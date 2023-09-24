@@ -1,0 +1,26 @@
+@import '../../styles/colors';
+
+.footer {
+
+background-color: $secondary-color;
+
+
+
+
+&__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Info {
+        color: $white-smooth;
+    }
+}
+
+	&__icons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 1rem;
+	}
+}

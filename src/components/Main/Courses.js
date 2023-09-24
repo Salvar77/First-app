@@ -4,7 +4,7 @@ import classes from "./Courses.module.scss";
 const Courses = () => {
 	return (
 		<section id="courses" className={classes.courses}>
-			<h2 className={classes.courses}>Kursy</h2>
+			<h2 className={classes.courses__container}>Kursy</h2>
 
 			<div className={classes.singleCourse}>
 				<div>

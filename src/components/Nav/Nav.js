@@ -8,10 +8,10 @@ const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
 		navClasses = `${classes.nav} ${classes.show}`;
 	}
 
-	return (
+	return (	
 		<div>
 			<div className={isOpen ? classes.overlay : ''} onClick={toggleMenu}></div>
-			<nav className={navClasses} onClick={(e) => e.stopPropagation()}>
+			<nav className={navClasses} >
 				<ul>
 					<li>
 						<Link href="/#hero">Strona główna</Link>
@@ -21,6 +21,9 @@ const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
 					</li>
 					<li>
 						<Link href="/#courses">Kursy</Link>
+					</li>
+					<li>
+						<Link href="/#sessions">Sesje</Link>
 					</li>
 					<li>
 						<Link href="/#shop">Sklep</Link>
