@@ -34,7 +34,7 @@ const Sessions = () => {
 						></Image>
 					</div>
 					<div>
-						<p className={classes.sessions__text}>Sesja Kompleksowa</p>
+						<p className={classes.sessions__text}>Sesja Całościowa</p>
 						<button className={classes.sessions__btn}>Dodaj do koszyka</button>
 					</div>
 					<br></br>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classes from "./Nav.module.css";
+import classes from "./Nav.module.scss";
 
 const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
 	
