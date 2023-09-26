@@ -1,0 +1,47 @@
+@import '../../styles/colors';
+
+.coursesPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // flex-wrap: wrap; 
+    width: 100%;
+    // top: 2rem;
+    padding: 4rem 1rem;
+
+    &__box {
+        // display: flex;
+        // flex-direction: column;
+        top: 10rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    &__text {
+        color: $new-color;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    &__btn {
+        color: $dark-smooth;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__img {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .coursesPage {
+        // display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+}

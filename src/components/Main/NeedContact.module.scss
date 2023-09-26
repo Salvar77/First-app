@@ -4,7 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $main-too-color;
+    background-color: $new-background;
+    // background: linear-gradient(45deg, 
+    //                         #f9ebc9,  //jasny kolor papirusu
+    //                         #f8e3b6,  //nieco ciemniejszy kolor papirusu
+    //                         #fcd89d,  //złotawo-pomarańczowy
+    //                         #f8e3b6,  //nieco ciemniejszy kolor papirusu
+    //                         #f9ebc9); //jasny kolor papirusu
 
     &__header {
         padding: 2rem;
