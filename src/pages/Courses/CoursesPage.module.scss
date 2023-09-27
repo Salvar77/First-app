@@ -8,7 +8,7 @@
     // flex-wrap: wrap; 
     width: 100%;
     // top: 2rem;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
 
     &__box {
         // display: flex;
@@ -20,10 +20,13 @@
 
     &__text {
         color: $new-color;
+        margin: 1rem 0;
+        padding: 1rem;
     }
 
     h1 {
         text-align: center;
+        padding: 1rem;
     }
 
     &__btn {
@@ -35,13 +38,77 @@
     &__img {
         min-width: 100%;
         width: 100%;
+        padding: 1rem;
+    }
+
+    &__status {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // gap: 1rem;
+        // border: 1px solid black; 
+
+        &Segment {
+            padding: 1rem;
+            border: 1px solid black;
+        }
+
+        &Price {
+            font-size: 1.2rem;
+        }
+
+        &Label {
+            padding: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        &Waiting {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        
+        &Contento {
+            margin-top: 1rem;
+        }
     }
 }
 
 @media (min-width: 768px) {
     .coursesPage {
-        // display: flex;
-        flex-direction: row;
-        gap: 2rem;
+        &__status {
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+
+            &Segment {
+                flex: 1;
+                flex-direction: row;
+                font-size: 2rem;
+            }
+
+            &Price {
+                font-size: 2rem;
+                
+            }
+    
+            &Labelo {
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+    
+            &Waiting {
+                
+                font-size: 2rem;
+            }
+
+            &Btn {
+                padding: 1rem;
+            }
+
+            &Contento {
+                margin-top: 1rem;
+            }
+        }
     }
 }

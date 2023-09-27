@@ -1,3 +1,5 @@
+@import '../../styles/colors';
+
 .burger {
 	position: fixed;
 	top: 2rem;
@@ -8,10 +10,9 @@
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	color: red;
+	color: $new-color;
 	transition: all 0.3s ease;
 }
-
 
 
 .spin {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Nav from "./Nav";
-import classes from "./BurgerMenu.module.css";
+import classes from "./BurgerMenu.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
