@@ -1,9 +1,16 @@
+@import '../styles/_colors.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap');
+
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
+  font-size: 1.6rem;
   font-family: 'Alkatra', sans-serif;
+  color: $new-color;
 }
 
 

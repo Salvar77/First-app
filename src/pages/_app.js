@@ -1,5 +1,5 @@
-
-import "@/styles/globals.css";
+import Footer from "@/components/footer/Footer";
+import "@/styles/globals.scss";
 import BurgerMenu from "../components/Nav/BurgerMenu";
 import Logo from "@/components/Nav/Logo";
 import "slick-carousel/slick/slick.css";
@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
 				<BurgerMenu />
 			</header>
 			<Component {...pageProps} />
+			<Footer />
 		</>
 	);
 }

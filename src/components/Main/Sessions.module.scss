@@ -6,10 +6,10 @@
     align-items: center; 
     padding-top: 1rem;
     padding: 1rem;
-    background-color: $main-color;
+    background-color: $new-background;
 
     h2 {
-        color: $white-smooth;
+        color: $new-color;
     }
 
     &__box {
@@ -20,7 +20,7 @@
 
     &__text {
         text-align: center;
-        color: $white-smooth;
+        color: $new-background;
         padding: 0.6rem;
     }
 
@@ -40,24 +40,58 @@
     }
 
     &__btn {
+        display: flex;
+		justify-content: center;
 		width: 100%;
-		border-radius: 1.4rem;
+		border-radius: 1rem;
 		padding: 1rem;
-		font-size: 1rem;
+		font-size: 1.6rem;
 		background-color: $secondary-color;
-		color: $white-smooth;
+		color: $dark-smooth;
         cursor: pointer;
 
         &:hover {
-            background-color: $secondary-color-hover;
+            background-color: $new-color-hover;
         }
 	}
-}
 
-@media (min-width: 768px) {
-    .sessions {
-        &__box {
+    &__container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem; // Dodaje odstęp między tytułem a zawartością
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        @media (min-width: 768px) {
             flex-direction: row;
+            justify-content: center; // Rozmieszcza zawartość równo
+            // flex-wrap: wrap;
         }
     }
+
 }
+
+// @media (min-width: 768px) {
+//     .sessions {
+//         flex-direction: row;
+//         // align-items: flex-start;
+//         order: -1;
+
+//         &__box {
+//             display: flex;
+//             flex-direction: row;
+//         }
+//     }
+
+//     .sessions__container {
+// 		// display: flex;
+// 		// justify-content: center; // Ustawia kursy obok siebie w poziomie
+// 		text-align: center;
+// 		width: 100%;
+// 		// flex-wrap: wrap;
+// 	}
+// }

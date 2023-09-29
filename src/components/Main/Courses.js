@@ -7,21 +7,24 @@ export const coursesData = [
 		id: "courses1",
 		image: "/courses-1.jpg",
 		description:
-			"wspólna transformacja energetyczna, w której przejdziesz przez różne zakamarki swojej energetyki",
+			"Jeśli jesteś gotów na poznanie siebie, na pracę nad soba, na wiedzę, na temat tego co znajduje się w Twoim polu, aby posiadać wygląd, we własne możliwości, potencjał który jest na wyciągnięcie Twojej ręki, lub blokady, które należy usunąć, to czytanie jest idealne dla CIEBIE✨",
 		title: "Kursy 1",
+		amount: "200"
 	},
 	{
 		id: "courses2",
 		image: "/courses-2.jpg",
-		description: "GLOW ENERGETYCZNY TO 1,5H GODZINNY TRANS DO SIEBIE",
+		description: "Wysokie wibracje, oznaczają, że jesteś osobą, która na co dzień przejawia pozytywne emocje i uczucia.🤍✨ Widzisz pozytywy, w każdej rzeczy która Cię otacza, potrafisz zauważyć lekcje, w trudnych sytuacjach.👀🧘🏽‍♀️IE",
 		title: "Kursy 2",
+		amount: "400"
 	},
 	{
 		id: "courses3",
 		image: "/courses-3.jpg",
 		description:
-			"Piękna Istoto🤍 Zapraszam Cię na 1,5/2 godzinne praktyczne warsztaty",
+			"Wysokie wibracje, oznaczają, że jesteś osobą, która na co dzień przejawia pozytywne emocje i uczucia.🤍✨ Widzisz pozytywy, w każdej rzeczy która Cię otacza, potrafisz zauważyć lekcje, w trudnych sytuacjach.👀🧘🏽‍♀️",
 		title: "Kursy 3",
+		amount: "600"
 	},
 ];
 

@@ -7,7 +7,7 @@ import Reviews from "../components/Main/Reviews";
 import Courses from "../components/Main/Courses";
 import Sessions from "@/components/Main/Sessions";
 import Footer from "@/components/footer/Footer";
-import NeedConctact from "@/components/Main/NeedContact";
+import NeedContact from "@/components/Main/NeedContact";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -34,8 +34,7 @@ export default function IndexPage() {
             <Reviews />
             <Courses />
             <Sessions />
-            <NeedConctact />
-            <Footer />
+            <NeedContact />
         </>
     );
 }

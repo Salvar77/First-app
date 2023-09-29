@@ -7,7 +7,7 @@
 	justify-content: center;
 	padding: 2rem 0;
 	z-index: 10;
-	background-color: $main-too-color;
+	background-color: $new-background;
 
 	&__box {
 		position: relative;
@@ -17,7 +17,7 @@
 		box-shadow: 3px 3px 10px #2e2e2e2e;
 		transition: transform 0.3s;
 		align-items: center;
-		background-color: $dark-smooth;
+		background-color: $white-smooth;
 
 		&:hover {
 			transform: scale(0.95);
@@ -42,36 +42,37 @@
 	&__boxQuote {
 		margin-bottom: 1rem;
 		font-size: 2rem;
-		color: $white-smooth;
+		color: $new-color;
 	}
 
 	&__boxText {
 		margin-bottom: 1rem;
 		font-size: 1.4rem;
-		color: $white-smooth;
+		color: $new-color;
 	}
 
 	&__boxInfo {
-		background-color: $dark-smooth;
+		background-color: $white-smooth;
 	}
 
 	&__strong {
-		color: $white-smooth;
+		color: $new-color;
 	}
 
 	&__btn {
 		position: relative;
 		padding: 0.8rem 1.6rem;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		// border: 2px solid black;
 		border-radius: 0.6rem;
-		color: $white-smooth;
+		color: $new-color;
 		text-decoration: none;
 		// text-transform: uppercase;
+		font-family: "Alkatra";
 		cursor: pointer;
 		overflow: hidden;
 		max-width: 30rem;	
-		background-color: $dark-smooth;
+		background-color: $white-smooth;
 
 		&::before,
 		&::after {

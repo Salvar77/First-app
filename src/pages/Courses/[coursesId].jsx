@@ -1,8 +1,10 @@
+import { useRouter } from "next/router";
+import { coursesData } from "../../components/Main/Courses";
+
+import Footer from "@/components/footer/Footer";
 import classes from "./CoursesPage.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { coursesData } from "../../components/Main/Courses";
 
 const CoursesPage = () => {
 	const router = useRouter();
@@ -22,24 +24,24 @@ const CoursesPage = () => {
 
 				<div className={classes.coursesPage__status}>
 					<div className={classes.coursesPage__statusSegment}>
-						<span className={classes.coursesPage__statusLabelo}>Current Status</span>
-						<div className={classes.coursesPage__statusContento}>
-							<span className={classes.coursesPage__statusWaiting}>Not Enrolled</span>
+						<span className={classes.coursesPage__statusSegmentLabelo}>Current Status</span>
+						<div className={classes.coursesPage__statusSegmentContento}>
+							<span className={classes.coursesPage__statusSegmentWaiting}>Not Enrolled</span>
 						</div>
 					</div>
 
 					<div className={classes.coursesPage__statusSegment}>
-						<span className={classes.coursesPage__statusLabelo}>Price</span>
-						<div className={classes.coursesPage__statusContento}>
-							<span className={classes.coursesPage__statusPrice}>555zł</span>
+						<span className={classes.coursesPage__statusSegmentLabelo}>Price</span>
+						<div className={classes.coursesPage__statusSegmentContento}>
+							<span className={classes.coursesPage__statusSegmentPrice}>{course.amount}</span>
 						</div>
 					</div>
 
 					<div className={classes.coursesPage__statusSegment}>
-						<span className={classes.coursesPage__statusLabelo}>Get Started</span>
-						<div className={classes.coursesPage__statusContento}>
-							<div className={classes.coursesPage__statusAction}>
-								<a className={classes.coursesPage__statusBtn}>Zapisz się na szkolenie</a>
+						<span className={classes.coursesPage__statusSegmentLabelo}>Get Started</span>
+						<div className={classes.coursesPage__statusSegmentContento}>
+							<div className={classes.coursesPage__statusSegmentAction}>
+								<Link href='/PaySection' className={classes.coursesPage__statusBtn}>Zapisz się na szkolenie</Link>
 							</div>
 						</div>
 					</div>
@@ -56,7 +58,7 @@ const CoursesPage = () => {
 					<Image
 						src={course.image}
 						alt="Opis grafiki"
-						width={500}
+						width={600}
 						height={300}
 						className={classes.coursesPage__img}
 					></Image>
@@ -67,7 +69,7 @@ const CoursesPage = () => {
 
 				<div>
 					<h2>Kurs zawartość</h2>
-					<a>video masterclass</a>
+					<a>video TDC</a>
 				</div>
 			</div>
 		</section>
