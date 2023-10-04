@@ -2,6 +2,29 @@ import Slider from "react-slick";
 import Link from "next/link";
 import classes from "./Reviews.module.scss";
 
+const reviewsData = [
+	{
+		id: "review1",
+		image: "/sessions-4.jpg",
+		description:
+			"Jeśli jesteś gotów na poznanie siebie, na pracę nad soba, na wiedzę, na temat tego co znajduje się w Twoim polu, aby posiadać wygląd, we własne możliwości, potencjał który jest na wyciągnięcie Twojej ręki, lub blokady, które należy usunąć, to czytanie jest idealne dla CIEBIE✨	",
+		title: "Sesja Online",
+	},
+	{
+		id: "review2",
+		image: "/review-1.jpg",
+		description: "GLOW ENERGETYCZNY TO 1,5H GODZINNY TRANS DO SIEBIE",
+		title: "Sesja Całościowa",
+	},
+	{
+		id: "review3",
+		image: "/review-3.jpg",
+		description:
+			"Wiele osób pyta mnie o cennik, który mam w zakładce na profilu ale dla ułatwienia wstawiam go jeszcze w formie posta. Korzystajcie👀",
+		title: "Sesja Odczyt Kart Tarota",
+	},
+];
+
 const Review = ({ imgSrc, alt, text, name }) => {
 	return (
 		<div className={classes.reviews__box}>
@@ -32,35 +55,24 @@ export default function Reviews() {
 
 	return (
 		<div className={classes.reviews}>
-			
-				<Slider {...settings}>
+			<Slider {...settings}>
+				{reviewsData.map((review) => (
 					<Review
-						imgSrc="/review-1.png"
-						alt="Anna Nowak"
-						text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa dolor eligendi iusto harum amet nam accusamus atque id sequi placeat."
-						name="Anna Nowak"
+						key={review.id}
+						imgSrc={review.image}
+						alt={review.title}
+						text={review.description}
+						name={review.title}
 					/>
-					<Review
-						imgSrc="/review-2.jpg"
-						alt="Jan Kowalski"
-						text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa dolor eligendi iusto harum amet nam accusamus atque id sequi placeat."
-						name="Jan Kowalski"
-					/>
-					<Review
-						imgSrc="/review-3.jpg"
-						alt="Maria Wiśniewska"
-						text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa dolor eligendi iusto harum amet nam accusamus atque id sequi placeat."
-						name="Maria Wiśniewska"
-					/>
-				</Slider>
-				<div className={classes.linkWrapper}>
-					<Link href="/all-reviews">
-						<button className={classes.reviews__btn}>
-							Zobacz wszystkie opinie
-						</button>
-					</Link>
-				</div>
-			
+				))}
+			</Slider>
+			<div className={classes.linkWrapper}>
+				<Link href={`/Reviews/${reviewsData[1].id}`}>
+					<button className={classes.reviews__btn}>
+						Zobacz wszystkie opinie
+					</button>
+				</Link>
+			</div>
 		</div>
 	);
 }

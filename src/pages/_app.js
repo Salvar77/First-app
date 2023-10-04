@@ -12,7 +12,9 @@ export default function App({ Component, pageProps }) {
 				<Logo />
 				<BurgerMenu />
 			</header>
-			<Component {...pageProps} />
+			<main>
+				<Component {...pageProps} />
+			</main>
 			<Footer />
 		</>
 	);

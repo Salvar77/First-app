@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./Courses.module.scss";
@@ -29,6 +30,26 @@ export const coursesData = [
 ];
 
 const Courses = () => {
+
+	const [windowWidth, setWindowWidth] = useState(0);
+
+  
+
+	useEffect(() => {
+		setWindowWidth(window.innerWidth);
+
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+
 	return (
 		<section id="courses" className={classes.courses}>
 			<h2 className={classes.courses__container}>Kursy</h2>
@@ -37,7 +58,7 @@ const Courses = () => {
 				<div key={course.id} className={classes.singleCourse}>
 					<div>
 						<Image
-							className={classes.courses__img}
+							className={classes.courses__img} 
 							src={course.image}
 							alt="Opis grafiki"
 							width={500}
