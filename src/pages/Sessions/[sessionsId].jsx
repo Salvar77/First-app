@@ -44,6 +44,7 @@ const SessionsPage = () => {
 					width={500}
 					height={400}
 					className={classes.sessionsPage__img}
+					alt='sesja'
 				></Image>
 				<p className={classes.sessionsPage__text}>{session.description}</p>
 				<p className={classes.sessionsPage__text}>

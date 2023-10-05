@@ -69,7 +69,7 @@ const CoursesPage = () => {
 
 				<div>
 					<h2>Kurs zawartość</h2>
-					<a>video TDC</a>
+					<p>video TDC</p>
 				</div>
 			</div>
 		</section>

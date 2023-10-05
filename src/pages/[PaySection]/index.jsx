@@ -8,7 +8,7 @@ const PaySectionCourses = () => {
   const PaySection = router.query.PaySection;
 
     return (
-      <h1 className={classes.pay}>!</h1>
+      <h1 className={classes.pay}>{PaySection}</h1>
     )
   }
   

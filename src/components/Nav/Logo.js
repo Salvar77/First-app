@@ -1,8 +1,10 @@
 import classes from './Logo.module.css';
+import Image from 'next/image';
+import logo from '../../assets/image/logo.png';
 
 const Logo = () => {
   return (
-    <img className={classes.logo} src="/logo.png" alt="Logo Firmy" />
+    <Image className={classes.logo} src={logo} alt="Logo Firmy" />
   )
 }
 
