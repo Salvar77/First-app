@@ -11,14 +11,14 @@ const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
 
 	return (	
 		<div>
-			<div className={isOpen ? classes.overlay : ''} onClick={toggleMenu}></div>
+			<div aria-hidden="true" className={isOpen ? classes.overlay : ''} onClick={toggleMenu}></div>
 			<nav className={navClasses} >
 				<ul>
 					<li>
 						<Link href="/#hero">Strona główna</Link>
 					</li>
 					<li>
-						<Link href="/#aboutMe">O mnie</Link>
+						<Link href="/AboutMe/about">O mnie</Link>
 					</li>
 					<li>
 						<Link href="/#courses">Kursy</Link>

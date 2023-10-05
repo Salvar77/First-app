@@ -1,0 +1,77 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.aboutMe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 6rem;
+	// width: 100%;
+	background-color: $new-background;
+
+	// @include heroImages("/Hero_640.jpg", "/Hero_1920.jpg");
+
+	&__box {
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 2rem;
+		margin: 1rem;
+		padding: 1rem;
+		text-align: center;
+		color: $new-color;
+	}
+
+	&__img {
+		width: 100%;
+		// min-width: 100%;
+	}
+
+	&__links {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+
+		a {
+			color: $dark-smooth;
+			font-size: 1.5rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $white-smooth;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.aboutMe {
+		flex-direction: row;
+        
+
+		&__img {
+			width: 40rem; // Przykładowa wartość
+			max-width: none;
+			margin-left: 2rem;
+		}
+
+		&__box {
+            flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__info {
+			font-size: 1.4rem;
+			margin-right: 1rem;
+		}
+
+		&__links {
+			flex-direction: row;
+		}
+	}
+}

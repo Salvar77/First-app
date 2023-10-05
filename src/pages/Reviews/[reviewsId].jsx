@@ -7,7 +7,7 @@ const ReviewsPage = () => {
 	
 
 	return (
-		 <section className={classes.galleryMain}>
+	   <section id='review1' className={classes.galleryMain}>
             <div className={`${classes.content} ${classes.flow}`}>
                 <h1 className={classes.title}>Galeria</h1>
                 <div className={classes.gridIsh}>

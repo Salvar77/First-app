@@ -1,34 +1,35 @@
 import classes from './Footer.module.scss';
+import Link from 'next/link';
 
-const Footer = (props) => {
+const Footer = () => {
 	return (
 		<footer className={classes.footer}>
 			<div className={classes.footer__container}>
-				<p className={classes.footer__text}>
+				<div className={classes.footer__text}>
 					<p className={classes.footer__textInfo}>
 						&copy;<span class="footer__year"></span> Tarot, Duchowość, Coaching{" "}
 					</p>
-				</p>
+				</div>
 				<ul className={classes.footer__icons}>
 					<li>
-						<a href="#">
+						<Link href="#">
 							<i class="fab fa-facebook-f"></i>
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="#">
+						<Link href="#">
 							<i class="fab fa-twitter"></i>
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="#">
+						<Link href="#">
 							<i class="fab fa-linkedin-in"></i>
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="#">
+						<Link href="#">
 							<i class="fab fa-instagram"></i>
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>

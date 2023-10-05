@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { sessionsData } from "@/components/Main/Sessions";
 
-import Footer from "@/components/footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import classes from "./SessionsPage.module.scss";

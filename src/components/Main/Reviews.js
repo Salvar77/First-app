@@ -1,24 +1,28 @@
 import Slider from "react-slick";
 import Link from "next/link";
 import classes from "./Reviews.module.scss";
+import Image from "next/image";
+import picture1 from '../../assets/image/review-1.png';
+import picture2 from '../../assets/image/review-2.jpg';
+import picture3 from '../../assets/image/review-3.jpg';
 
 const reviewsData = [
 	{
 		id: "review1",
-		image: "/sessions-4.jpg",
+		image: picture1,
 		description:
 			"Jeśli jesteś gotów na poznanie siebie, na pracę nad soba, na wiedzę, na temat tego co znajduje się w Twoim polu, aby posiadać wygląd, we własne możliwości, potencjał który jest na wyciągnięcie Twojej ręki, lub blokady, które należy usunąć, to czytanie jest idealne dla CIEBIE✨	",
 		title: "Sesja Online",
 	},
 	{
 		id: "review2",
-		image: "/review-1.jpg",
+		image: picture2,
 		description: "GLOW ENERGETYCZNY TO 1,5H GODZINNY TRANS DO SIEBIE",
 		title: "Sesja Całościowa",
 	},
 	{
 		id: "review3",
-		image: "/review-3.jpg",
+		image: picture3,
 		description:
 			"Wiele osób pyta mnie o cennik, który mam w zakładce na profilu ale dla ułatwienia wstawiam go jeszcze w formie posta. Korzystajcie👀",
 		title: "Sesja Odczyt Kart Tarota",
@@ -29,14 +33,16 @@ const Review = ({ imgSrc, alt, text, name }) => {
 	return (
 		<div className={classes.reviews__box}>
 			<div className={classes.reviews__boxImg}>
-				<img src={imgSrc} alt={alt} />
+				<Image src={imgSrc} alt={alt} />
 			</div>
 			<div className={classes.reviews__boxInfo}>
 				<div className={classes.reviews__boxQuote}>
 					<i className="fas fa-quote-right"></i>
 				</div>
 				<p className={classes.reviews__boxText}>{text}</p>
-				<strong className={classes.reviews__strong}>{name}</strong>
+				<p>
+					<strong className={classes.reviews__strong}>{name}</strong>
+				</p>
 			</div>
 		</div>
 	);

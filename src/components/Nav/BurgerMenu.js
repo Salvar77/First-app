@@ -4,31 +4,24 @@ import classes from "./BurgerMenu.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-const BurgerMenu = (props) => {
+const BurgerMenu = () => {
 	
 	const [isOpen, setIsOpen] = useState(false);
-	const [windowWidth, setWindowWidth] = useState(
-		typeof window !== "undefined" ? window.innerWidth : 0
-	); // tutaj zdefiniowana
 
-	useEffect(() => {
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth);
-		};
 
-		window.addEventListener("resize", handleResize);
+	const [windowWidth, setWindowWidth] = useState('');
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+        const handleResizeWindow = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResizeWindow);
+        return () => {
+            window.removeEventListener('resize', handleResizeWindow);
+        };
+    }, []);
 
-		// Upewnij się, że usuwasz event listener przy unmountingu
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+	
 
-	useEffect(() => {
-		if (windowWidth >= 992) {
-			setIsOpen(false);
-		}
-	}, [windowWidth]); // tutaj używana
+
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);

@@ -1,12 +1,15 @@
-import { useState, useEffect } from "react";
+
 import Image from "next/image";
+import coursesPicture1 from '../../assets/image/courses_1.jpg';
+import coursesPicture2 from '../../assets/image/courses_2.jpg';
+import coursesPicture3 from '../../assets/image/courses_3.jpg';
 import Link from "next/link";
 import classes from "./Courses.module.scss";
 
 export const coursesData = [
 	{
 		id: "courses1",
-		image: "/courses-1.jpg",
+		image: coursesPicture1,
 		description:
 			"Jeśli jesteś gotów na poznanie siebie, na pracę nad soba, na wiedzę, na temat tego co znajduje się w Twoim polu, aby posiadać wygląd, we własne możliwości, potencjał który jest na wyciągnięcie Twojej ręki, lub blokady, które należy usunąć, to czytanie jest idealne dla CIEBIE✨",
 		title: "Kursy 1",
@@ -14,14 +17,14 @@ export const coursesData = [
 	},
 	{
 		id: "courses2",
-		image: "/courses-2.jpg",
+		image: coursesPicture2,
 		description: "Wysokie wibracje, oznaczają, że jesteś osobą, która na co dzień przejawia pozytywne emocje i uczucia.🤍✨ Widzisz pozytywy, w każdej rzeczy która Cię otacza, potrafisz zauważyć lekcje, w trudnych sytuacjach.👀🧘🏽‍♀️IE",
 		title: "Kursy 2",
 		amount: "400"
 	},
 	{
 		id: "courses3",
-		image: "/courses-3.jpg",
+		image: coursesPicture3,
 		description:
 			"Wysokie wibracje, oznaczają, że jesteś osobą, która na co dzień przejawia pozytywne emocje i uczucia.🤍✨ Widzisz pozytywy, w każdej rzeczy która Cię otacza, potrafisz zauważyć lekcje, w trudnych sytuacjach.👀🧘🏽‍♀️",
 		title: "Kursy 3",
@@ -31,23 +34,6 @@ export const coursesData = [
 
 const Courses = () => {
 
-	const [windowWidth, setWindowWidth] = useState(0);
-
-  
-
-	useEffect(() => {
-		setWindowWidth(window.innerWidth);
-
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth);
-		};
-
-		window.addEventListener("resize", handleResize);
-
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
 
 
 	return (
@@ -59,10 +45,8 @@ const Courses = () => {
 					<div>
 						<Image
 							className={classes.courses__img} 
-							src={course.image}
+							src={coursesPicture1}
 							alt="Opis grafiki"
-							width={500}
-							height={300}
 						/>
 					</div>
 					<div>

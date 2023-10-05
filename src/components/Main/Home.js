@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from '../Main/Home.module.scss';
+import { Link } from "react-scroll";
 
 export default function Home() {
 	return (
 		<main>
-			<section id="aboutMe" className={styles.aboutMe}>
+			<section id="AboutMe" className={styles.aboutMe}>
 				<div>
 					<Image
 						className={styles.aboutMe__img}
@@ -55,6 +56,7 @@ export default function Home() {
 							<i className="fab fa-instagram"></i>
 						</a>
 					</div>
+					<Link></Link>
 				</div>
 			</section>
 		</main>

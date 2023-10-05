@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { coursesData } from "../../components/Main/Courses";
 
-import Footer from "@/components/footer/Footer";
+
 import classes from "./CoursesPage.module.scss";
 import Link from "next/link";
 import Image from "next/image";
