@@ -10,7 +10,7 @@
 	// width: 100%;
 	background-color: $new-background;
 
-	// @include heroImages("/Hero_640.jpg", "/Hero_1920.jpg");
+	@include heroImages("/Hero_640.jpg", "/Hero_1920.jpg");
 
 	&__box {
 		text-align: center;
@@ -21,7 +21,7 @@
 		margin: 1rem;
 		padding: 1rem;
 		text-align: center;
-		color: $new-color;
+		color: $new-p-color;
 	}
 
 	&__img {
