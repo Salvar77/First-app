@@ -5,11 +5,16 @@ import coursesPicture2 from '../../assets/image/courses_2.jpg';
 import coursesPicture3 from '../../assets/image/courses_3.jpg';
 import Link from "next/link";
 import classes from "./Courses.module.scss";
+import img1 from "/courses-1.jpg"
 
 export const coursesData = [
 	{
 		id: "courses1",
+<<<<<<< HEAD
 		image: coursesPicture1,
+=======
+		image: img1,
+>>>>>>> 93a6cbb85011ebe232c41b0f8a624b9f86d7c31f
 		description:
 			"Jeśli jesteś gotów na poznanie siebie, na pracę nad soba, na wiedzę, na temat tego co znajduje się w Twoim polu, aby posiadać wygląd, we własne możliwości, potencjał który jest na wyciągnięcie Twojej ręki, lub blokady, które należy usunąć, to czytanie jest idealne dla CIEBIE✨",
 		title: "Kursy 1",
