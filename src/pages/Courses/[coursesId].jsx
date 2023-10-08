@@ -49,9 +49,7 @@ const CoursesPage = () => {
 
 				<div>
 					<p className={classes.coursesPage__text}>{course.description}</p>
-					<Link href="/PaySection" className={classes.coursesPage__btn}>
-						Dodaj do koszyka
-					</Link>
+					
 					<br></br>
 					<br></br>
 					<p className={classes.coursesPage__text}>{course.description}</p>

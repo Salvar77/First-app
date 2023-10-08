@@ -39,21 +39,28 @@
 		padding: 1rem;
 	}
 
+	
+
+
 	&__status {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		// gap: 1rem;
 		// border: 1px solid black;
+		
 
 		&Segment {
 			padding: 1rem;
-			border: 1px solid black;
+			border: 2px solid $new-color;
 			padding: 2rem 0;
+			border-radius: 2rem;
+
 
 			&Labelo {
 				padding: 1rem 0;
 				font-size: 2rem;
+				
 			}
 
 			&Price {
@@ -63,10 +70,12 @@
 			&Waiting {
 				margin: 1rem 0;
 				font-size: 1.6rem;
+				
 			}
 
 			&Contento {
 				margin-top: 2rem;
+				
 			}
 		}
 

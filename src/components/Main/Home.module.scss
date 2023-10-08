@@ -32,24 +32,24 @@
 	&__btn {
 		// font-family: "Alkatra";
 		display: inline-block;
-		width: auto;
+		// width: auto;
 		// text-align: center;
 		margin: 0 auto;
-		padding: 1.6rem 3.2rem;
-		font-size: 1.6rem;
+		padding: 1rem 1.6rem;
+		font-size: 1.4rem;
 		transition: background-color 0.3s;
 		border-radius: 0.6rem;
 		// opacity: 0.6;
 		color: $white-smooth;
-		background-color: $dark-smooth;
+		background-color: $new-color;
 		box-shadow: 0.4rem 0.6rem 0.8rem;
 		// border: none;
 		transition: 0.5s;
 		text-decoration: none;
 
 		&:hover {
-			box-shadow: 0.6rem 0.8rem 0 0 rgba(175, 23, 23, 0.8),
-				inset 0.8rem 0.4rem 0.8rem rgba(239, 112, 112, 0.711);
+			box-shadow: 0.6rem 0.8rem 0 0 rgba(175, 132, 23, 0.8),
+				inset 0.8rem 0.4rem 0.8rem rgba(167, 99, 10, 0.711);
 		}
 	}
 }
@@ -105,6 +105,11 @@
 		&__info {
 			font-size: 1.4rem;
 			margin-right: 1rem;
+		}
+
+		&__btn {
+			font-size: 2rem;
+			padding: 1rem 2.2rem;
 		}
 	}
 

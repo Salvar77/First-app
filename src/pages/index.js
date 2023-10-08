@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Home from "../components/Main/Home";
-import Hero from "../components/Main/Hero";
 import Reviews from "../components/Main/Reviews";
 import Courses from "../components/Main/Courses";
 import Sessions from "@/components/Main/Sessions";
@@ -17,7 +16,6 @@ export default function IndexPage() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Hero />
             <Home />
             <Reviews />
             <Courses />

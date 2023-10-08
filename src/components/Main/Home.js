@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from '../Main/Home.module.scss';
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -33,6 +33,7 @@ export default function Home() {
 						consequuntur fugiat, magnam officiis molestiae dicta suscipit. Et
 						voluptatum sint sed molestias tempore similique eligendi.
 					</p>
+					<Link href="/AboutMe/about" className={styles.aboutMe__btn}>&#10132;</Link>
 					<div className={styles.links} >
 						<a 
 							href="https://www.youtube.com/user/TwojaNazwaUzytkownika"
@@ -49,14 +50,14 @@ export default function Home() {
 							<i className="fab fa-facebook"></i>
 						</a>
 						<a
-							href="https://www.instagram.com/TwojaNazwaUzytkownika"
+							href="https://www.instagram.com/moon.julu88/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<i className="fab fa-instagram"></i>
 						</a>
 					</div>
-					<Link></Link>
+					
 				</div>
 			</section>
 		</main>
