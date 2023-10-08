@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "./Nav.module.scss";
 
-const Nav = ({ isOpen, toggleMenu, windowWidth }) => {
+const Nav = ({ isOpen,  windowWidth }) => {
 	
 	let navClasses = classes.nav;
 
