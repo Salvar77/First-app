@@ -1,6 +1,7 @@
-
+// import pattern from '../../assets/image/pattern.svg';
 import Link from 'next/link';
 import classes from "./Hero.module.scss";
+// import Image from 'next/image';
 
 const Hero = () => {
 
@@ -14,6 +15,7 @@ const Hero = () => {
 					Pomagam zrozumieć i zmienić doświadczanie własnej rzeczywistości ✨
 				</p>
 				<Link href="#courses" className={classes.button}>Kursy</Link>
+			
 			</div>
 		</section>
 	);

@@ -1,4 +1,6 @@
 import styles from "./AdditionalSection.module.scss";
+import pattern from '../../assets/image/pattern.svg';
+import Image from "next/image";
 
 const AdditionalSection = () => {
 	return (
@@ -6,8 +8,12 @@ const AdditionalSection = () => {
 			<div>
 				<i className="fas fa-quote-right"></i>
 			</div>
-			<p className={styles.additionalSection__text}>&quot;...Wszechświat to energia,która odpowiada na nasze oczekiwania.Ludzie są rownież jej częścią,więc gdy mamy pytanie,zjawiają się osoby,które przynoszą nam odpowiedz.&quot;</p>
-            <p className={styles.additionalSection__text}>James Redfield, Niebiańska Przepowiednia</p>
+			<p className={styles.additionalSection__text}>
+				&quot;Some Thoughts&quot;
+			</p>
+			<p className={styles.additionalSection__text}></p>
+	
+			
 		</section>
 	);
 };

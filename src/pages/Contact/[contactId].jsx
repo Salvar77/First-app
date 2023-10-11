@@ -2,10 +2,10 @@ import styles from "./ContactPage.module.scss";
 import React, { useState } from "react";
 
 const contactData = [
-	{ type: "Ulica", value: "Twoja ulica 123" },
-	{ type: "Miasto", value: "Twoje miasto" },
+	{ type: "Ulica", value: "Opolska" },
+	{ type: "Miasto", value: "Opole" },
 	{ type: "Telefon", value: "123456789" },
-	{ type: "Email", value: "twoj-email@example.com" },
+	{ type: "Email", value: "email@gmail.com" },
 ];
 
 const ContactPage = () => {
