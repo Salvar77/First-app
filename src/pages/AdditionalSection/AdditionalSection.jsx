@@ -1,6 +1,5 @@
 import styles from "./AdditionalSection.module.scss";
-import pattern from '../../assets/image/pattern.svg';
-import Image from "next/image";
+
 
 const AdditionalSection = () => {
 	return (
