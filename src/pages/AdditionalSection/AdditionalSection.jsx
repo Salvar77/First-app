@@ -1,5 +1,5 @@
 import styles from "./AdditionalSection.module.scss";
-
+import HorizontalLine from "../Horizontal Line/HorizontalLine";
 
 const AdditionalSection = () => {
 	return (
@@ -11,7 +11,7 @@ const AdditionalSection = () => {
 				&quot;Some Thoughts&quot;
 			</p>
 			<p className={styles.additionalSection__text}></p>
-	
+			<HorizontalLine />
 			
 		</section>
 	);

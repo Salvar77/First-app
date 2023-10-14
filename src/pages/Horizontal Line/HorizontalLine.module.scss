@@ -1,0 +1,10 @@
+@import '../../styles/colors';
+
+.line {
+    height: .2rem;
+    background-color: $dark-smooth;
+    // position: fixed;
+    width: 100%;
+    // top: 50%;
+    z-index: 100;
+}
