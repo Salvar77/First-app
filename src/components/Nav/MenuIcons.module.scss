@@ -1,0 +1,48 @@
+.rightIcons {
+    position: fixed;
+    // display: none;
+    // align-items: center;
+    // justify-content: center;
+    right: 7rem;
+}
+
+.mobileIcons {
+    // position: absolute;
+    // top: 50%;
+    right: 60px; // Dostosuj wartość, aby `MenuIcons` były obok przycisku hamburgera.
+    transform: translateY(-50%);
+    display: none;  // Domyślnie ukryj ikony
+
+    @media (max-width: 992px) {
+        display: flex;  // Wyświetl ikony dla ekranów o szerokości mniejszej niż 992px
+    }
+}
+
+
+.rightIcons {
+    @media (max-width: 991px) {
+        display: none;  // Ukryj ikony na ekranach o szerokości mniejszej niż 992px
+    }
+}
+
+
+
+@media (min-width: 992px) {
+	.rightIcons {
+		// position: fixed;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		right: 10rem;
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.6rem;
+	}
+}
+
+
+

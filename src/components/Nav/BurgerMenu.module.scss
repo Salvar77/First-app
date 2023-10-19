@@ -1,22 +1,10 @@
 @import "../../styles/colors";
 
-.burger {
-	position: fixed;
-	top: 2rem;
-	right: 2rem;
-	transform: translateY(-50%);
-	z-index: 500;
-	font-size: 1.5rem;
-	background: transparent;
-	border: none;
-	cursor: pointer;
-	color: $new-color;
-	transition: all 0.3s ease;
-}
+
 
 .hamburger {
 	padding: 15px 15px;
-	display: inline-block;
+
 	cursor: pointer;
 	transition-property: opacity, filter;
 	transition-duration: 0.15s;
@@ -29,23 +17,40 @@
 	margin: 0;
 	overflow: visible;
 }
+
+.hamburgerContainer {
+	position: fixed;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	top: 1rem;
+	right: 1rem;
+	height: 5rem;
+	width: 100%;
+	z-index: 100;
+}
+
+
 .hamburger:hover {
 	opacity: 0.7;
 }
+
 .hamburger.isActive:hover {
 	opacity: 0.7;
 }
 .hamburger.isActive .hamburgerInner,
 .hamburger.isActive .hamburgerInner::before,
 .hamburger.isActive .hamburgerInner::after {
-	background-color: #000;
+	background-color: $new-background;
 }
 
 .hamburgerBox {
+	
 	width: 40px;
 	height: 24px;
 	display: inline-block;
 	position: relative;
+	transform: scale(0.7);
 }
 
 .hamburgerInner {
@@ -59,7 +64,7 @@
 .hamburgerInner::after {
 	width: 40px;
 	height: 4px;
-	background-color: #000;
+	background-color: $new-color;
 	border-radius: 4px;
 	position: absolute;
 	transition-property: transform;
@@ -81,11 +86,11 @@
 	bottom: -10px;
 }
 
-.hamburger__arrow.is-active .hamburgerInner::before {
+.hamburger__arrow.isActive .hamburgerInner::before {
 	transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
 }
 
-.hamburger__arrow.is-active .hamburgerInner::after {
+.hamburger__arrow.isActive .hamburgerInner::after {
 	transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
 }
 
@@ -99,7 +104,6 @@
 }
 
 .shopButton {
-	position: fixed;
 	top: 1rem;
 	right: 4rem;
 	/* z-index: 500; */
@@ -114,24 +118,20 @@
 	left: 2rem;
 }
 
-.rightIcons {
-	position: fixed;
-	top: 1.4rem;
-	right: 5rem;
-	display: flex;
-	gap: 1rem;
-	z-index: 500;
-}
 
-@media only screen and (min-width: 501px) {
-	.burger {
-		font-size: 2rem;
-		justify-content: center;
-	}
-}
+
 
 @media only screen and (min-width: 992px) {
-	.burger {
-		display: none; /* ukryj przycisk burgera */
+	.hamburger {
+		display: none; 
+	}
+
+	.hamburgerContainer {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		right: 20rem;
+		z-index: 1000;
+		
 	}
 }

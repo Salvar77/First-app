@@ -4,5 +4,5 @@
 	left: 1rem;
 	max-height: 50px;
 	width: auto;
-	z-index: 500;
+	z-index: 10000;
 }

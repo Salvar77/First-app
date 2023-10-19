@@ -1,7 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import "@/styles/globals.scss";
 import "hamburgers/dist/hamburgers.min.css";
-import BurgerMenu from "../components/Nav/BurgerMenu";
+import BurgerMenu from "@/components/Nav/BurgerMenu";
 import Logo from "@/components/Nav/Logo";
 import Hero from "@/components/Main/Hero";
 import AdditionalSection from "./AdditionalSection/AdditionalSection";
