@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Nav from "./Nav";
-import MenuIcons from "./MenuIcons";
+
 import classes from "./BurgerMenu.module.scss";
 
 const BurgerMenu = () => {
