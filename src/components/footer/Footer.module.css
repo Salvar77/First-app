@@ -1,0 +1,17 @@
+.footer {
+  background-color: #F4F0E8;
+}
+.footer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__textInfo {
+  color: #090909;
+}
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}/*# sourceMappingURL=Footer.module.css.map */

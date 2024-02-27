@@ -2,20 +2,34 @@ $main-color: rgba(175, 126, 40, 0.744);
 $main-too-color: rgba(67, 33, 81, 0.921);
 $new-color: rgba(136, 78, 16, 0.9);
 $new-color-hover: rgba(152, 88, 18, 0.9);
-$new-p-color: #EFA83E;
-$new-background: #F4F0E8;
+$new-p-color: #efa83e;
+$new-background: #f4f0e8;
 $secondary-color: rgba(136, 74, 19, 0.708);
 $secondary-color-hover: #c91f1fb8;
 $white-smooth: #fcfbfb;
 $dark-smooth: #090909;
 $dark-smooth-hover: rgb(51, 43, 43);
 
+$smooth-transition-gradient: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 0),
+  rgba(255, 255, 255, 0.7)
+);
 
-$smooth-transition-gradient: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.7));
+// $my-gradient:
 
-// $my-gradient: 
-
-
-$light-blue-gradient: linear-gradient(45deg, rgba(216, 96, 26, 0.65), rgba(75, 180, 241, 0.65));
-$light-blue-gradient-solid: radial-gradient(circle at top right, rgb(0, 78, 255) 0%, rgb(0, 212, 255) 100%);
-$blue-gradient-solid: linear-gradient(45deg, rgb(20, 105, 241), rgb(42, 10, 184));
+$light-blue-gradient: linear-gradient(
+  45deg,
+  rgba(216, 178, 26, 0.65),
+  rgba(75, 180, 241, 0.65)
+);
+$light-blue-gradient-solid: radial-gradient(
+  circle at top right,
+  rgb(0, 78, 255) 0%,
+  rgb(0, 212, 255) 100%
+);
+$blue-gradient-solid: linear-gradient(
+  45deg,
+  rgb(20, 105, 241),
+  rgb(42, 10, 184)
+);

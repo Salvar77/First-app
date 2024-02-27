@@ -1,0 +1,36 @@
+.rightIcons {
+  position: fixed;
+  right: 7rem;
+}
+
+.mobileIcons {
+  right: 60px;
+  transform: translateY(-50%);
+  display: none;
+}
+@media (max-width: 992px) {
+  .mobileIcons {
+    display: flex;
+  }
+}
+
+@media (max-width: 991px) {
+  .rightIcons {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .rightIcons {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    right: 10rem;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+  }
+}/*# sourceMappingURL=MenuIcons.module.css.map */
