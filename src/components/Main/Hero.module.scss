@@ -11,7 +11,7 @@
   align-items: center;
   text-align: center;
 
-  @include heroImages("/dragon_640.JPG", "/dragon_1920.JPG");
+  @include heroImages("/dragon_640.jpg", "/dragon_1920.jpg");
 
   &__title {
     color: $new-p-color;
