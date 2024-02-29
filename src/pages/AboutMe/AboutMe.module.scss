@@ -2,18 +2,40 @@
 @import "../../styles/mixins";
 
 .aboutMe {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 6rem;
   // width: 100%;
-  background-color: $new-background;
 
-  @include heroImages("/dragon_640.jpg", "/dragon_1920.jpg");
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(238, 203, 165, 0.7)
+    );
+    z-index: 1;
+  }
 
   &__box {
+    position: relative;
+    z-index: 2; // Upewnij się, że jest wyższy niż z-index dla '::before'
+    background: rgba(255, 255, 255, 0.9); // Półprzezroczyste białe tło
+    padding: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    @media (min-width: 992px) {
+      margin-left: 2rem;
+    }
 
     &Links {
       display: flex;
@@ -51,12 +73,26 @@
     padding: 1rem;
     text-align: center;
     color: $new-p-color;
+    z-index: 2;
+    border: 1px solid black;
+    opacity: 0.9;
   }
 
   &__img {
     max-width: 100%;
-    height: auto;
+    height: 25rem;
+
+    @media (min-width: 992px) {
+      height: 48rem;
+    }
   }
+}
+
+.aboutMe__box,
+.aboutMe__content,
+.aboutMe__img {
+  position: relative;
+  z-index: 2; /* Upewnij się, że jest wyższy niż 'z-index' dla '::before' */
 }
 
 @media (min-width: 768px) {

@@ -1,63 +1,95 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import AboutMePicture from "../../assets/image/King.jpg";
 import styles from "../AboutMe/AboutMe.module.scss";
+import AboutMePicture from "../../assets/image/King.jpg";
 
 const AboutMe = () => {
+  const [backgroundImage, setBackgroundImage] = useState("/dragon_640.jpg");
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 992px)");
+    const handleChange = (e) => {
+      setBackgroundImage(e.matches ? "/dragon_1920.jpg" : "/dragon_640.jpg");
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    handleChange(mediaQuery);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  const backgroundImageStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    // ... inne style które chcesz dodać
+  };
   return (
     <>
-      <section id="about" className={styles.aboutMe}>
-        <div>
-          <Image src={AboutMePicture} className={styles.aboutMe__img} alt="" />
-        </div>
-
-        <div className={styles.aboutMe__content}>
-          <div className={styles.aboutMe__box}>
-            <h2 className={styles.aboutMe__header}>Kim są Nagowie?</h2>
-            <p className={styles.aboutMe__text}>
-              Nagowie w indyjskiej mitologii to niebezpieczne demony, którzy
-              mieszkali w podziemnym świecie nazywanym Patala, byli to półludzie
-              (od pasa w górę) półwęże (od pasa w dół), uważana przez Aryjczyków
-              za półbogów. Posągi z nimi są nadal otaczane kultem w południowych
-              Indiach i ustawiane pod drzewami. W rejonie tych panuje
-              przekonanie, że ów jadowici oszuści są przyjaźni dla ludzi, pod
-              warunkiem, że nie niwelują im planów, natomiast jeśli kogoś sobie
-              upodobają to mogą ofiarować mu somę, która daje pijącemu wielką
-              siłę. Córki nagów trudno było odróżnić od zwyczajnych kobiet, np.
-              Ulupi, która wyszła za mąż za bohaterskiego Ardżunę. Nagowie byli
-              potomkami Kadru (żony mędrca Jasjapy), a królował im wąż
-              Ananta-Siesza, który posiadał siedem lub tysiąc głów i ochraniał
-              boga Wisznu podczas jego kosmicznego snu. Natomiast w Ramajanie
-              Ananta-Siesza jest ukazany jako Rawana czyli demoniczny władca
-              złych rakszasów. Małpi bóg Hanuman pokonał jednego z nagów
-              Naga-hag Surasę.
-            </p>
+      <div style={backgroundImageStyle}>
+        <section
+          id="about"
+          className={styles.aboutMe}
+          style={backgroundImageStyle}
+        >
+          <div>
+            <Image
+              src={AboutMePicture}
+              className={styles.aboutMe__img}
+              alt=""
+            />
           </div>
 
-          <div className={styles.aboutMe__boxLinks}>
-            <a
-              href="https://www.youtube.com/user/TwojaNazwaUzytkownika"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-youtube"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/TwojaNazwaUzytkownika"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/nazwa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
+          <div className={styles.aboutMe__content}>
+            <div className={styles.aboutMe__box}>
+              <h2 className={styles.aboutMe__header}>Kim są Nagowie?</h2>
+              <p className={styles.aboutMe__text}>
+                Nagowie w indyjskiej mitologii to niebezpieczne demony, którzy
+                mieszkali w podziemnym świecie nazywanym Patala, byli to
+                półludzie (od pasa w górę) półwęże (od pasa w dół), uważana
+                przez Aryjczyków za półbogów. Posągi z nimi są nadal otaczane
+                kultem w południowych Indiach i ustawiane pod drzewami. W
+                rejonie tych panuje przekonanie, że ów jadowici oszuści są
+                przyjaźni dla ludzi, pod warunkiem, że nie niwelują im planów,
+                natomiast jeśli kogoś sobie upodobają to mogą ofiarować mu somę,
+                która daje pijącemu wielką siłę. Córki nagów trudno było
+                odróżnić od zwyczajnych kobiet, np. Ulupi, która wyszła za mąż
+                za bohaterskiego Ardżunę. Nagowie byli potomkami Kadru (żony
+                mędrca Jasjapy), a królował im wąż Ananta-Siesza, który posiadał
+                siedem lub tysiąc głów i ochraniał boga Wisznu podczas jego
+                kosmicznego snu. Natomiast w Ramajanie Ananta-Siesza jest
+                ukazany jako Rawana czyli demoniczny władca złych rakszasów.
+                Małpi bóg Hanuman pokonał jednego z nagów Naga-hag Surasę.
+              </p>
+            </div>
+
+            <div className={styles.aboutMe__boxLinks}>
+              <a
+                href="https://www.youtube.com/user/TwojaNazwaUzytkownika"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/TwojaNazwaUzytkownika"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/nazwa/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };

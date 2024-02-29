@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Home from "../components/Main/Home";
+
 import Reviews from "../components/Main/Reviews";
 import Courses from "../components/Main/Courses";
 import Sessions from "@/components/Main/Sessions";

@@ -1,47 +1,42 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import classes from "./Hero.module.scss";
 
-// Przykładowe importy obrazów tła
-import heroImageMobile from "../../../public/dragon_640.jpg";
-import heroImageDesktop from "../../../public/dragon_1920.jpg";
-
 const Hero = () => {
-  const [currentImage, setCurrentImage] = useState(heroImageMobile);
+  const [backgroundImage, setBackgroundImage] = useState("/dragon_640.jpg"); // Start with the mobile image
 
   useEffect(() => {
-    const updateBackgroundAndHeight = () => {
-      const mediaQuery = window.matchMedia("(min-width: 992px)");
-      setCurrentImage(mediaQuery.matches ? heroImageDesktop : heroImageMobile);
-
-      const heroSection = document.getElementById("hero");
-      const viewportHeight = window.innerHeight;
-      heroSection.style.height = `${viewportHeight}px`;
+    const mediaQuery = window.matchMedia("(min-width: 992px)");
+    const handleChange = (e) => {
+      setBackgroundImage(e.matches ? "/dragon_1920.jpg" : "/dragon_640.jpg");
     };
 
-    updateBackgroundAndHeight(); // Wywołaj przy montowaniu komponentu
+    mediaQuery.addEventListener("change", handleChange); // Dodaj listener
+    handleChange(mediaQuery); // Wywołaj na początku, aby ustawić odpowiedni obraz
 
-    window.addEventListener("resize", updateBackgroundAndHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateBackgroundAndHeight);
-    };
+    return () => mediaQuery.removeEventListener("change", handleChange); // Oczyść po unmount
   }, []);
 
+  const backgroundImageStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    // ... inne style które chcesz dodać
+  };
+
   return (
-    <section
-      id="hero"
-      className={classes.hero}
-      style={{ backgroundImage: `url(${currentImage})` }}
-    >
-      <div className={classes.textOverlay}>
-        <h1 className={classes.hero__title}>The Nagas Journey</h1>
-        <p>Posążki ozdobne / Koszulki: Nagowie</p>
-        <Link href="#courses" className={classes.button}>
-          &#10132;
-        </Link>
-      </div>
-    </section>
+    <div style={backgroundImageStyle}>
+      <section id="hero" className={classes.hero}>
+        <div className={classes.textOverlay}>
+          <h1 className={classes.hero__title}>The Nagas Journey</h1>
+          <p>Posążki ozdobne / Koszulki: Nagowie</p>
+          <Link href="#courses" className={classes.button}>
+            &#10132;
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 };
 
