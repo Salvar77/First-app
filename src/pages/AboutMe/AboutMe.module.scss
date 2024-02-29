@@ -17,6 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+
     background: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.3),
@@ -125,5 +126,17 @@
     &__links {
       flex-direction: row;
     }
+  }
+}
+
+@media (max-width: 991px) {
+  .aboutMe::before {
+    background-attachment: scroll; /* Domyślnie dla mobilnych */
+  }
+}
+
+@media (min-width: 992px) {
+  .aboutMe::before {
+    background-attachment: fixed; /* Efekt paralaksy dla desktopów */
   }
 }
