@@ -27,7 +27,7 @@ const AboutMe = () => {
   };
   return (
     <>
-      <div style={backgroundImageStyle}>
+      <div style={backgroundImageStyle} className={styles.AboutMe__background}>
         <section
           id="about"
           className={styles.aboutMe}
