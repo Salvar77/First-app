@@ -1,36 +1,54 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import classes from "./Hero.module.scss";
+import heroImageMobile from "../../assets/image/dragon_640.jpg";
+import heroImageDesktop from "../../assets/image/dragon_1920.jpg";
 
 const Hero = () => {
-  const [backgroundImage, setBackgroundImage] = useState("/dragon_640.jpg"); // Start with the mobile image
+  const [backgroundImage, setBackgroundImage] = useState(heroImageMobile);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 992px)");
-    const handleChange = (e) => {
-      setBackgroundImage(e.matches ? "/dragon_1920.jpg" : "/dragon_640.jpg");
+    const mediaQuery = window.matchMedia("(min-width:992px)");
+
+    const handleMediaQueryChange = (e) => {
+      setBackgroundImage(e.matches ? heroImageDesktop : heroImageMobile);
     };
 
-    mediaQuery.addEventListener("change", handleChange); // Dodaj listener
-    handleChange(mediaQuery); // Wywołaj na początku, aby ustawić odpowiedni obraz
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    handleMediaQueryChange(mediaQuery);
 
-    return () => mediaQuery.removeEventListener("change", handleChange); // Oczyść po unmount
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
   }, []);
 
-  const backgroundImageStyle = {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
-    // ... inne style które chcesz dodać
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      const heroSection = document.getElementById("hero");
+      const viewportHeight = window.innerHeight;
+      heroSection.style.height = `${viewportHeight}px`;
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section id="hero" className={classes.hero}>
-      <div
-        className={classes.hero__background}
-        style={backgroundImageStyle}
-      ></div>{" "}
+      <div>
+        <Image
+          src={backgroundImage} // Dynamicznie zmieniające się źródło obrazu
+          alt="Tło sekcji O mnie"
+          layout="fill"
+          objectFit="cover"
+          quality={100} // Możesz dostosować jakość obrazu
+          priority
+        />
+      </div>
+      <div className={classes.hero__background}></div>{" "}
       {/* Tutaj dodajemy zamknięcie tagu */}
       <div className={classes.textOverlay}>
         <h1 className={classes.hero__title}>The Nagas Journey</h1>
