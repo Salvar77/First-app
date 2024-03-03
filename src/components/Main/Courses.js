@@ -15,7 +15,7 @@ export const coursesData = [
     description:
       "Odkryj wyjątkową kolekcję pamiątkowych koszulek od NGE, stworzoną z myślą o tym, by celebrować i zachować wspomnienia z Twoich niezapomnianych chwil. Każda koszulka w naszej ofercie to nie tylko stylowy element garderoby, ale także osobisty znak pamiątkowy, który przenosi Cię z powrotem do tych wyjątkowych momentów w życiu.",
     title: "Czerwień",
-    amount: "200",
+    amount: "50",
   },
   {
     id: "courses2",
@@ -23,7 +23,7 @@ export const coursesData = [
     description:
       "Odkryj wyjątkową kolekcję pamiątkowych koszulek od NGE, stworzoną z myślą o tym, by celebrować i zachować wspomnienia z Twoich niezapomnianych chwil. Każda koszulka w naszej ofercie to nie tylko stylowy element garderoby, ale także osobisty znak pamiątkowy, który przenosi Cię z powrotem do tych wyjątkowych momentów w życiu.",
     title: "Złoto",
-    amount: "400",
+    amount: "100",
   },
   {
     id: "courses3",
@@ -31,7 +31,7 @@ export const coursesData = [
     description:
       "Odkryj wyjątkową kolekcję pamiątkowych koszulek od NGE, stworzoną z myślą o tym, by celebrować i zachować wspomnienia z Twoich niezapomnianych chwil. Każda koszulka w naszej ofercie to nie tylko stylowy element garderoby, ale także osobisty znak pamiątkowy, który przenosi Cię z powrotem do tych wyjątkowych momentów w życiu.",
     title: "Czerń",
-    amount: "600",
+    amount: "150",
   },
 ];
 

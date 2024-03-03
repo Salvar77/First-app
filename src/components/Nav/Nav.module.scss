@@ -1,201 +1,182 @@
 @import "../../styles/_colors.scss";
 
-
-
 .nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	height: 100vh;
-	text-align: center;
-	/* width: 100%; */
-	background-color: $new-background;
-	z-index: 400;
-	transform: translateX(100%);
-	transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  text-align: center;
+  /* width: 100%; */
+  background-color: $new-background;
+  z-index: 400;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 
-	&__show {
-		top: 6rem;
-		transform: translateX(0);
-		min-width: 100%;
-		max-height: 60%;
-		display: flex;
-		// flex-direction: column-reverse;
-		justify-content: center;
-		align-items: center;
-		//  overflow-y: auto;
-		z-index: 100;
-		// background-color: red;
-	}
+  &__show {
+    top: 6rem;
+    transform: translateX(0);
+    min-width: 100%;
+    max-height: 60%;
+    display: flex;
+    // flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    //  overflow-y: auto;
+    z-index: 100;
+    // background-color: red;
+  }
 
-	&__desktop {
-		transform: translateX(0);
-	}
+  &__desktop {
+    transform: translateX(0);
+  }
 
-	&__container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 1rem 0;
-	}
-
-
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
 }
 
 .nav ul {
-	list-style: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-	padding: 1rem 0;
-	// z-index: 100;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 0;
+  // z-index: 100;
 }
 
 .nav ul li {
-	padding: 1rem; /* dodaje marginesy na górze i na dole każdego elementu li, przesuwając je w dół */
-	color: $new-color;
-	text-align: center;
+  padding: 1rem; /* dodaje marginesy na górze i na dole każdego elementu li, przesuwając je w dół */
+  color: $new-color-hover;
+  text-align: center;
 }
 
 .four {
-	display: none;
+  display: none;
 }
 
 .menu {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 992px) {
-	.nav {
-		height: 6.6rem;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		transform: none;
-		left: 0;
-		top: 0;
-		background-color: $new-background;
-		// margin-top: 0;
-		opacity: 0.9;
-		z-index: 1000;
+  .nav {
+    height: 6.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    left: 0;
+    top: 0;
+    background-color: $new-background;
+    // margin-top: 0;
+    opacity: 0.9;
+    z-index: 1000;
 
-		&::before,
-		&::after {
-			transition: 0.3s;
-		}
+    &::before,
+    &::after {
+      transition: 0.3s;
+    }
 
-		
+    &__items {
+      margin: 0 1rem;
+      font-size: 1.8rem;
+      color: $white-smooth;
 
-		&__items {
-			margin: 0 1rem;
-			font-size: 1.8rem;
-			color: $white-smooth;
+      &:hover::before,
+      &:hover::after {
+        display: none;
+      }
+    }
+  }
 
-			&:hover::before,
-			&:hover::after {
-				display: none;
-			}
-		}
-	}
-	
+  .nav ul li {
+    padding: 1rem 1rem;
+  }
 
+  .four:hover .dropdown li {
+    animation: menu4 0.5s forwards;
+    transform-origin: top;
+  }
 
-	.nav ul li {
-		padding: 1rem 1rem;
-	}
+  .menuItem {
+    position: relative;
+    display: inline-block;
+    width: 8.4rem;
+    // line-height: 10rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-	
+    &:hover {
+      background-color: $new-background;
+    }
+  }
 
+  .dropdown {
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    right: 0; // Ensure it stretches across the parent width
+    top: 100%; // This makes the dropdown start right after the parent ends
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -1rem;
+    // width: 5rem;
+    // top: 100%;
+    padding: 1rem;
 
-	.four:hover .dropdown li {
-		animation: menu4 0.5s forwards;
-		transform-origin: top;
-	}
+    li {
+      // display: block;
+      // height: 10rem;
+      min-width: 100%;
+      opacity: 0;
+      background-color: $new-background;
+      transition: color 0.3s;
+      // margin: 0;
+      line-height: normal;
+      padding: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border: none;
 
-	.menuItem {
-		display: inline-block;
-		width: 8.4rem;
-		// line-height: 10rem;
-		cursor: pointer;
-		transition: background-color 0.3s;		
+      &:hover {
+        color: $new-color;
+      }
+    }
+  }
 
-		&:hover{
-			background-color: $new-background;
-		}
-	}
+  .menuItem:hover .dropdown li {
+    display: inline-block;
+    animation: menu4 0.5s forwards;
+  }
 
-	.dropdown {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		// width: 5rem;
-		// top: 100%;
-		padding: 1rem 0;
+  .menuItem:hover .dropdown li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .menuItem:hover .dropdown li:nth-child(3) {
+    animation-delay: 0.4s;
+  }
 
-		li {
-			// display: block;
-			// height: 10rem;
-			min-width: 100%;
-			opacity: 0;
-			background-color: $new-background;
-			transition: color 0.3s;
-			// margin: 0;
-			line-height: normal;
-			padding: 1rem;
-			border-top: 1px solid rgba(0, 0, 0, 0.1);
-			border: none; 
+  .menu {
+    flex-direction: row;
+  }
 
-			
+  // flexible-grid
 
-			&:hover {
-				color: $new-color;
-			}
-		}
-	}
-	
+  @keyframes menu4 {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(-1px);
+    }
 
-
-	.menuItem:hover .dropdown li {
-		display: inline-block;
-		animation: menu4 0.5s forwards;
-		
-	}
-
-	.menuItem:hover .dropdown li:nth-child(2) {
-		animation-delay: 0.2s;
-	}
-	.menuItem:hover .dropdown li:nth-child(3) {
-		animation-delay: 0.4s;
-	}
-	
-
-	
-
-	.menu {
-		flex-direction: row;
-	}
-	
-	
-	
-	
-
-	
-
-	// flexible-grid
-
-	@keyframes menu4 {
-		from {
-			opacity: 0;
-			transform: scale(0.8) translateY(-1px);
-		}
-
-		to {
-			opacity: 1;
-			transform: scale(1) translateY(0);
-		}
-	}
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
 }

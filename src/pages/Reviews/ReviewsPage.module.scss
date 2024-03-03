@@ -1,81 +1,70 @@
-@import '../../styles/mixins';
-@import '../../styles/colors';
-
-
-
-// body {
-// 	display: grid;
-// 	place-content: center;
-// 	min-height: 100vh;
-// }
-
-
+@import "../../styles/mixins";
+@import "../../styles/colors";
 
 .galleryMain {
-	display: grid;
-	place-items: center;
-	min-height: 100vh;
-	background-color: $new-background;
-	padding-top: 6rem;
-  
-	.content {
-	  width: 70vw;
-	  margin: 1rem auto;
-	  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
-	}
+  display: grid;
+  //   place-items: center;
+  //   min-height: 100vh;
+  background-color: $new-background;
+  margin-top: 5rem;
 
-	// .flow {
-
-	// }
-  
-	.title {
-	  font-weight: 900;
-	  color: $new-color;
-	  background-color: $new-background;
-	  text-align: center;
-	}
-  
-	.gridIsh {
-	  display: flex;
-	  gap: 0.2rem;
-	  flex-wrap: wrap;
-  
-	  > * {
-		flex: 1 1 25rem;
-	  }
-	}
-  
-	.col {
-	  padding: 3rem;
-	  background: $dark-smooth;
-	  border: 3px solid rgba(0, 0, 0, 0.2);
-	  position: relative;
-  
-	  &:before {
-		content: "";
-		display: block;
-		padding-top: 75%;
-	  }
-  
-	  img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
-		transition: transform .3s;
-  
-		// &:hover {
-		//   transform: scale(1.1);
-		// }
-	  }
-	}
+  .content {
+    width: 70vw;
+    margin: 1rem auto;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
   }
 
+  // .flow {
+
+  // }
+
+  .title {
+    font-weight: 900;
+    color: $new-color;
+    background-color: $new-background;
+    text-align: center;
+  }
+
+  .gridIsh {
+    display: flex;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 1 1 25rem;
+    }
+  }
+
+  .col {
+    padding: 3rem;
+    background: $dark-smooth;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 75%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s;
+
+      // &:hover {
+      //   transform: scale(1.1);
+      // }
+    }
+  }
+}
 
 @media (min-width: 768px) {
-    .galleryMain {
-		padding-top: .2rem;
-	}
+  .galleryMain {
+    padding-top: 0.2rem;
+  }
 }

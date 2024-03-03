@@ -37,21 +37,24 @@ const AboutMe = () => {
   }, []);
   return (
     <>
+      <div className={styles.background}>
+        <Image
+          src={currentImage} // Dynamicznie zmieniające się źródło obrazu
+          alt="Tło sekcji O mnie"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+        />
+      </div>
       <section id="about" className={styles.aboutMe}>
-        <div>
+        <div className={styles.aboutMe__image}>
           <Image
-            src={currentImage} // Dynamicznie zmieniające się źródło obrazu
-            alt="Tło sekcji O mnie"
-            layout="fill"
-            objectFit="cover"
-            quality={100} // Możesz dostosować jakość obrazu
-            priority
+            src={AboutMePicture}
+            className={styles.aboutMe__img}
+            alt="Nagowie"
           />
         </div>
-        <div>
-          <Image src={AboutMePicture} className={styles.aboutMe__img} alt="" />
-        </div>
-
         <div className={styles.aboutMe__content}>
           <div className={styles.aboutMe__box}>
             <h2 className={styles.aboutMe__header}>Kim są Nagowie?</h2>

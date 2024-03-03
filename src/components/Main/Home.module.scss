@@ -24,8 +24,8 @@
 
   &__info {
     font-family: "Alkatra";
-    font-size: 1rem;
-    color: $new-color;
+    font-size: 1.4rem;
+    color: $main-too-color;
     padding: 2rem;
     margin: 0 auto;
   }
@@ -36,28 +36,74 @@
     border-radius: 2rem;
   }
 
-  &__btn {
-    // font-family: "Alkatra";
-    display: inline-block;
-    // width: auto;
-    // text-align: center;
-    margin: 0 auto;
-    padding: 1rem 1.6rem;
-    font-size: 1.4rem;
-    transition: background-color 0.3s;
-    border-radius: 0.6rem;
-    // opacity: 0.6;
-    color: $white-smooth;
-    background-color: $new-color;
-    box-shadow: 0.4rem 0.6rem 0.8rem;
-    // border: none;
-    transition: 0.5s;
-    text-decoration: none;
+  // &__btn {
+  //   // font-family: "Alkatra";
+  //   display: inline-block;
+  //   // width: auto;
+  //   // text-align: center;
+  //   margin: 0 auto;
+  //   padding: 1rem 1.6rem;
+  //   font-size: 1.4rem;
+  //   transition: background-color 0.3s;
+  //   border-radius: 0.6rem;
+  //   // opacity: 0.6;
+  //   color: $white-smooth;
+  //   background-color: $new-p-color;
+  //   box-shadow: 0.4rem 0.6rem 0.8rem;
+  //   // border: none;
+  //   transition: 0.5s;
+  //   text-decoration: none;
 
-    &:hover {
-      box-shadow: 0.6rem 0.8rem 0 0 rgba(175, 132, 23, 0.8),
-        inset 0.8rem 0.4rem 0.8rem rgba(167, 99, 10, 0.711);
-    }
+  //   &:hover {
+  //     box-shadow: 0.3rem 0.4rem 0 0 rgba(175, 132, 23, 0.8),
+  //       inset 0.8rem 0.4rem 0.8rem rgba(167, 99, 10, 0.711);
+  //   }
+  // }
+}
+
+.btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #d70d0d;
+  min-width: 10rem;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 1.6rem 2.6rem;
+  margin-top: 1rem;
+  color: $dark-smooth;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}
+
+.btn .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+      0 0 0 80px rgba(255, 255, 255, 0);
   }
 }
 
@@ -73,7 +119,7 @@
 .sectionHeading {
   font-size: 2rem;
   text-align: center;
-  color: $new-color;
+  color: $main-color;
   padding: 1rem;
 }
 
@@ -88,7 +134,7 @@
     transition: color 0.3s;
 
     &:hover {
-      color: $white-smooth;
+      color: $main-color;
     }
   }
 }
@@ -110,7 +156,7 @@
     }
 
     &__info {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       margin-right: 1rem;
     }
 

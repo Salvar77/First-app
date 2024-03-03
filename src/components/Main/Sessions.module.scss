@@ -1,78 +1,77 @@
 @import "../../styles/colors";
 
 .sessions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding: 1rem;
+  background-color: $new-background;
+
+  h2 {
+    color: $main-too-color;
+  }
+
+  &__box {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    padding-top: 1rem;
+    gap: 3rem;
+  }
+
+  &__text {
+    text-align: center;
+    color: $new-background;
+    padding: 0.6rem;
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 2rem;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    Image {
+      border-radius: 2rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 1rem;
     padding: 1rem;
-    background-color: $new-background;
+    font-size: 1.6rem;
+    background-color: $secondary-color;
+    color: $dark-smooth;
+    cursor: pointer;
+    transition: 0.3s;
 
-    h2 {
-        color: $new-color;
+    &:hover {
+      background-color: $new-color;
     }
+  }
 
-    &__box {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
+  &__container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem; // Dodaje odstęp między tytułem a zawartością
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center; // Rozmieszcza zawartość równo
+      // flex-wrap: wrap;
     }
-
-    &__text {
-        text-align: center;
-        color: $new-background;
-        padding: 0.6rem;
-    }
-
-    &__img {
-        max-width: 100%;
-        border-radius: 2rem;
-        transition: transform .3s;
-
-
-        &:hover {
-            transform: scale(0.9);
-        }
-
-        Image {
-            border-radius: 2rem;
-        }
-    }
-
-    &__btn {
-        display: flex;
-		justify-content: center;
-		width: 100%;
-		border-radius: 1rem;
-		padding: 1rem;
-		font-size: 1.6rem;
-		background-color: $secondary-color;
-		color: $dark-smooth;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $new-color-hover;
-        }
-	}
-
-    &__container {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1rem; // Dodaje odstęp między tytułem a zawartością
-    }
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-
-        @media (min-width: 768px) {
-            flex-direction: row;
-            justify-content: center; // Rozmieszcza zawartość równo
-            // flex-wrap: wrap;
-        }
-    }
-
+  }
 }
 
 // @media (min-width: 768px) {

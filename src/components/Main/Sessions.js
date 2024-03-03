@@ -7,24 +7,25 @@ export const sessionsData = [
     id: "sessions1",
     image: "/buddha_640.jpg",
     description:
-      "Jeśli jesteś gotów na poznanie siebie, na pracę nad soba, na wiedzę, na temat tego co znajduje się w Twoim polu, aby posiadać wygląd, we własne możliwości, potencjał który jest na wyciągnięcie Twojej ręki, lub blokady, które należy usunąć, to czytanie jest idealne dla CIEBIE✨	",
+      "W naszym asortymencie znajdziesz posążki przedstawiające różnorodne bóstwa hinduistyczne, takie jak: Ganesha - bóg mądrości, usuwający przeszkody, patron nauki i pisarzy, często czczony jako pierwszy przed rozpoczęciem nowych przedsięwzięć. Lakshmi - bogini pomyślności, bogactwa, czystości i hojności, a także uosobienie piękna i uroku. Shiva - niszczyciel zła i transformator, przedstawiany jako źródło dobra i opiekun medytacji i sztuk. Krishna - bóg miłości, współczucia i dobroci, znany z Bhagawadgity jako duchowy mentor Arjuny. Saraswati - bogini wiedzy, muzyki, sztuki i mądrości, inspirująca uczących się i poszukujących duchowego rozwoju.	",
     title: "Sesja Online",
-    amount: "200",
+    amount: "50",
   },
   {
     id: "sessions2",
     image: "/cobra_640.jpg",
-    description: "GLOW ENERGETYCZNY TO 1,5H GODZINNY TRANS DO SIEBIE",
+    description:
+      "Autentyczność: Każdy posążek jest wykonany z należytą starannością i uwagą do detali, zachowując autentyczność i duchowość. Rękodzieło: Nasze produkty są ręcznie robione przez wykwalifikowanych rzemieślników, co nadaje im unikalny charakter. Jakość Materiałów: Używamy tylko najlepszej jakości materiałów, takich jak brąz, marmur, mosiądz i kamień, aby zapewnić trwałość i estetyczne piękno. Duchowość: Posążki te nie tylko ozdobią Twój dom, ale mogą również służyć jako przedmioty kultu w domowym sanktuarium, przynosząc pokój i harmonię. Idealny Prezent: Doskonały wybór na prezent dla bliskich, którzy cenią duchowość i kulturę indyjską, czy to z okazji świąt, urodzin, czy jako symbol szczęścia i dobrobytu.",
     title: "Sesja Całościowa",
-    amount: "400",
+    amount: "100",
   },
   {
     id: "sessions3",
     image: "/buddha_640.jpg",
     description:
-      "Wiele osób pyta mnie o cennik, który mam w zakładce na profilu ale dla ułatwienia wstawiam go jeszcze w formie posta. Korzystajcie👀",
+      "Naszym celem jest dostarczanie produktów, które nie tylko są piękne wizualnie, ale także mają głębokie znaczenie duchowe. Zapraszamy do przeglądania naszej kolekcji i odkrywania piękna i spokoju, jakie mogą przynieść do Twojego życia te wyjątkowe dzieła sztuki.",
     title: "Sesja Odczyt Kart Tarota",
-    amount: "600",
+    amount: "150",
   },
 ];
 

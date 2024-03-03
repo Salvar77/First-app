@@ -1,157 +1,149 @@
 @import "../../styles/colors";
 
-
-
 .coursesPage {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	// flex-wrap: wrap;
-	width: 100%;
-	// top: 2rem;
-	padding: 2rem 1rem;
-	background-color: $new-background;
-	
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  // top: 2rem;
+  padding: 2rem 1rem;
+  background-color: $new-background;
+  padding-top: 7rem;
 
-	&__box {
-		// display: flex;
-		// flex-direction: column;
-		top: 10rem;
-		margin-top: 2rem;
-		text-align: center;
-	}
+  &__box {
+    // display: flex;
+    // flex-direction: column;
+    top: 10rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
 
-	&__text {
-		color: $new-color;
-		margin: 1rem 0;
-		padding: 1rem;
-	}
+  &__text {
+    color: $new-color;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
 
-	h1 {
-		text-align: center;
-		padding: 1rem;
-	}
+  h1 {
+    text-align: center;
+    padding: 1rem;
+  }
 
-	&__img {
-		max-width: 100%;
-		// width: 100%;
-		padding: 1rem;
-	}
+  &__img {
+    max-width: 100%;
+    // width: 100%;
+    padding: 1rem;
+  }
 
-	
+  &__status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // gap: 1rem;
+    // border: 1px solid black;
 
+    &Segment {
+      padding: 1rem;
+      border: 2px solid $new-color;
+      padding: 2rem 0;
+      border-radius: 2rem;
 
-	&__status {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		// gap: 1rem;
-		// border: 1px solid black;
-		
+      &Labelo {
+        padding: 1rem 0;
+        font-size: 2rem;
+      }
 
-		&Segment {
-			padding: 1rem;
-			border: 2px solid $new-color;
-			padding: 2rem 0;
-			border-radius: 2rem;
+      &Price {
+        font-size: 1.6rem;
+      }
 
+      &Waiting {
+        margin: 1rem 0;
+        font-size: 1.6rem;
+      }
 
-			&Labelo {
-				padding: 1rem 0;
-				font-size: 2rem;
-				
-			}
+      &Contento {
+        margin-top: 2rem;
+      }
+    }
 
-			&Price {
-				font-size: 1.6rem;
-			}
+    &Btn {
+      padding: 15px 25px;
+      border: unset;
+      border-radius: 15px;
+      color: $new-color;
+      z-index: 1;
+      background: $white-smooth;
+      position: relative;
+      font-weight: 1000;
+      font-size: 17px;
+      -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      transition: all 250ms;
+      overflow: hidden;
 
-			&Waiting {
-				margin: 1rem 0;
-				font-size: 1.6rem;
-				
-			}
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        border-radius: 15px;
+        background-color: $white-smooth;
+        -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        transition: all 250ms;
+        z-index: -1;
+      }
 
-			&Contento {
-				margin-top: 2rem;
-				
-			}
-		}
+      &:hover {
+        color: $dark-smooth;
+      }
 
-		&Btn {
-			padding: 15px 25px;
-			border: unset;
-			border-radius: 15px;
-			color: $new-color;
-			z-index: 1;
-			background: $white-smooth;
-			position: relative;
-			font-weight: 1000;
-			font-size: 17px;
-			-webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-			box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-			transition: all 250ms;
-			overflow: hidden;
-
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 0;
-				border-radius: 15px;
-				background-color: $white-smooth;
-				-webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-				box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-				transition: all 250ms;
-                z-index: -1;
-			}
-
-			&:hover {
-				color: $dark-smooth;
-			}
-
-			&:hover::before {
-				width: 100%;
-			}
-		}
-	}
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
-	.coursesPage {
-		&__status {
-			flex-direction: row;
-			flex-wrap: wrap;
+  .coursesPage {
+    &__status {
+      flex-direction: row;
+      flex-wrap: wrap;
 
-			&Segment {
-				flex: 1;
-				flex-direction: row;
-				font-size: 2rem;
-			}
+      &Segment {
+        flex: 1;
+        flex-direction: row;
+        font-size: 2rem;
+      }
 
-			&Price {
-				font-size: 2rem;
-			}
+      &Price {
+        font-size: 2rem;
+      }
 
-			&Labelo {
-				margin-bottom: 1rem;
-				font-size: 2rem;
-			}
+      &Labelo {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
 
-			&Waiting {
-				font-size: 2rem;
-			}
+      &Waiting {
+        font-size: 2rem;
+      }
 
-			&Btn {
-				padding: 1rem;
-			}
+      &Btn {
+        padding: 1rem;
+      }
 
-			&Contento {
-				margin-top: 1rem;
-			}
-		}
-	}
+      &Contento {
+        margin-top: 1rem;
+      }
+    }
+  }
 }

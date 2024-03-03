@@ -9,7 +9,7 @@ export default function Home() {
         <div>
           <Image
             className={styles.aboutMe__img}
-            src="/naga_640.jpg"
+            src="/King.jpg"
             alt="Opis obrazu"
             width={500}
             height={300}
@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className={styles.aboutMe__boxText}>
           <h2 className={styles.sectionHeading}>
-            Kim są Nagowie wedle mitologii?
+            Kim są Nagowie według mitologii?
           </h2>
           <p className={styles.aboutMe__info}>
             Nagowie w indyjskiej mitologii to niebezpieczne demony, którzy
@@ -36,8 +36,10 @@ export default function Home() {
             jako Rawana czyli demoniczny władca złych rakszasów. Małpi bóg
             Hanuman pokonał jednego z nagów Naga-hag Surasę.
           </p>
-          <Link href="/AboutMe/about" className={styles.aboutMe__btn}>
-            &#10132;
+          <Link href="/AboutMe/about" className={styles.btn}>
+            <i className={styles.animation}></i>
+            Zobacz
+            <i className={styles.animation}></i>
           </Link>
           <div className={styles.links}>
             <a
@@ -55,7 +57,7 @@ export default function Home() {
               <i className="fab fa-facebook"></i>
             </a>
             <a
-              href="https://www.instagram.com/moon.julu88/"
+              href="https://www.instagram.com/twojaNazwaUzytkownika/"
               target="_blank"
               rel="noopener noreferrer"
             >

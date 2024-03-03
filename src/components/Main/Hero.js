@@ -53,8 +53,10 @@ const Hero = () => {
       <div className={classes.textOverlay}>
         <h1 className={classes.hero__title}>The Nagas Journey</h1>
         <p>Posążki ozdobne / Koszulki: Nagowie</p>
-        <Link href="#courses" className={classes.button}>
+        <Link href="#sessions" className={classes.btn}>
+          <i className={classes.animation}></i>
           &#10132;
+          <i className={classes.animation}></i>
         </Link>
       </div>
     </section>

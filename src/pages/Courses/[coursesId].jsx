@@ -24,18 +24,18 @@ const CoursesPage = () => {
         <div className={classes.coursesPage__status}>
           <div className={classes.coursesPage__statusSegment}>
             <span className={classes.coursesPage__statusSegmentLabelo}>
-              Current Status
+              Obecny Status
             </span>
             <div className={classes.coursesPage__statusSegmentContento}>
               <span className={classes.coursesPage__statusSegmentWaiting}>
-                Not Enrolled
+                Nie Zarejestrowany
               </span>
             </div>
           </div>
 
           <div className={classes.coursesPage__statusSegment}>
             <span className={classes.coursesPage__statusSegmentLabelo}>
-              Price
+              Cena
             </span>
             <div className={classes.coursesPage__statusSegmentContento}>
               <span className={classes.coursesPage__statusSegmentPrice}>
@@ -77,11 +77,6 @@ const CoursesPage = () => {
           <br></br>
           <br></br>
           <p className={classes.coursesPage__text}> {course.description}</p>
-        </div>
-
-        <div>
-          <h2>Kurs zawartość</h2>
-          <p>video TDC</p>
         </div>
       </div>
     </section>

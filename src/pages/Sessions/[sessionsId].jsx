@@ -48,11 +48,7 @@ const SessionsPage = () => {
           alt="sesja"
         ></Image>
         <p className={classes.sessionsPage__text}>{session.description}</p>
-        <p className={classes.sessionsPage__text}>
-          Inwestycja w siebie to 555 zł. PS Po dokonaniu zakupu kontaktuje się z
-          Tobą poprzez adres e-mail, podany przy zamówieniu, i ustalamy dogodny
-          dla każdej ze stron termin.
-        </p>
+        <p className={classes.sessionsPage__text}>{session.description}</p>
       </div>
     </section>
   );

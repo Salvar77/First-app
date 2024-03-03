@@ -1,110 +1,106 @@
 @import "../../styles/colors";
 
 .reviews {
-	// position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 2rem 0;
-	z-index: 10;
-	background-color: $new-background;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+  z-index: 10;
+  background-color: $new-background;
 
-	&__box {
-		position: relative;
-		margin: 2rem;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 3px 3px 10px #2e2e2e2e;
-		transition: transform 0.3s;
-		align-items: center;
-		background-color: $white-smooth;
+  &__box {
+    position: relative;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px #2e2e2e2e;
+    transition: transform 0.3s;
+    align-items: center;
+    background-color: $white-smooth;
 
-		&:hover {
-			transform: scale(0.95);
-		}
-	}
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
 
-	&__boxImg {
-		position: absolute;
-		top: 8%;
-		left: 75%;
-		transform: translate(-50%, -50%);
-		
+  &__boxImg {
+    position: absolute;
+    top: 8%;
+    left: 75%;
+    transform: translate(-50%, -50%);
 
-		img {
-			width: 80px;
-			height: 80px;
-			object-fit: cover;
-			border-radius: 50%;
-		}
-	}
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
 
-	&__boxQuote {
-		margin-bottom: 1rem;
-		font-size: 2rem;
-		color: $new-color;
-	}
+  &__boxQuote {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: $main-too-color;
+  }
 
-	&__boxText {
-		margin-bottom: 1rem;
-		font-size: 1.4rem;
-		color: $new-color;
-	}
+  &__boxText {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: $main-too-color;
+  }
 
-	&__boxInfo {
-		background-color: $white-smooth;
-	}
+  &__boxInfo {
+    background-color: $white-smooth;
+  }
 
-	&__strong {
-		color: $new-color;
-	}
+  &__strong {
+    color: $new-color;
+  }
 
-	&__btn {
-		position: relative;
-		padding: 0.8rem 1.6rem;
-		font-size: 1.4rem;
-		// border: 2px solid black;
-		border-radius: 0.6rem;
-		color: $new-color;
-		text-decoration: none;
-		// text-transform: uppercase;
-		font-family: "Alkatra";
-		cursor: pointer;
-		overflow: hidden;
-		max-width: 30rem;	
-		background-color: $white-smooth;
+  &__btn {
+    position: relative;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+    // border: 2px solid black;
+    border-radius: 0.6rem;
+    color: $main-too-color;
+    text-decoration: none;
+    // text-transform: uppercase;
+    font-family: "Alkatra";
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 30rem;
+    background-color: $white-smooth;
 
-		&::before,
-		&::after {
-			display: block;
-			position: absolute;
-			content: "";
-			transition: 0.6s;
-		}
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      transition: 0.6s;
+    }
 
-		&::before {
-			top: -30px;
-			left: -130px;
-			height: 240%;
-			width: 100px;
-			background-image: linear-gradient(
-				-90deg,
-				rgba(156, 112, 73, 0.3),
-				rgba(193, 31, 31, 0)
-			);
-			transform: rotate(20deg);
-		}
+    &::before {
+      top: -30px;
+      left: -130px;
+      height: 240%;
+      width: 100px;
+      background-image: linear-gradient(
+        -90deg,
+        rgba(156, 112, 73, 0.3),
+        rgba(193, 31, 31, 0)
+      );
+      transform: rotate(20deg);
+    }
 
-		&:hover::before {
-			left: 130%;
-		}
-	}
+    &:hover::before {
+      left: 130%;
+    }
+  }
 }
 
-
-
-
 .linkWrapper {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
