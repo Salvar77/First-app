@@ -34,11 +34,16 @@
     color: $new-color;
   }
 
+  &__header {
+    color: $dark-smooth;
+  }
+
   &__button {
     padding: 1rem 2rem;
     border-radius: 1rem;
     border: 2px solid $new-color;
     background-color: $white-smooth;
+    color: $dark-smooth;
 
     &:hover {
       background-color: $new-color;
