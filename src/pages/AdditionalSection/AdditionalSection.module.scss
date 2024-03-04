@@ -21,6 +21,10 @@
   }
 }
 
+.fas {
+  color: $dark-smooth;
+}
+
 @media (min-width: 768px) {
   .additionalSection {
     &__text {
