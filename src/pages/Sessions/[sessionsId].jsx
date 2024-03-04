@@ -30,7 +30,7 @@ const SessionsPage = () => {
           <h2 className={classes.sessionsPage__header}>
             Posążek Buddha Anantaśesza
           </h2>
-          <p className={classes.sessionsPage__text}>575 zł</p>
+          <p className={classes.sessionsPage__textText}>575 zł</p>
           <Link href="/PaySection" className={classes.sessionsPage__button}>
             Zamów!
           </Link>

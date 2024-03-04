@@ -1,8 +1,15 @@
 .logo {
-	position: fixed;
-	top: 0.3rem;
-	left: 1rem;
-	max-height: 50px;
-	width: auto;
-	z-index: 10000;
+  position: fixed;
+  top: 1rem;
+  left: -9rem;
+  max-height: 10rem;
+  width: auto;
+  z-index: 10000;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    top: 1rem;
+    left: -4rem;
+  }
 }

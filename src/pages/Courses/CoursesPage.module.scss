@@ -21,18 +21,21 @@
     margin-top: 2rem;
     text-align: center;
     color: $dark-smooth;
+
+    h1 {
+      text-align: center;
+      padding: 1rem;
+      color: $new-p-color;
+    }
   }
 
   &__text {
-    color: $new-color;
+    color: $white-smooth;
     margin: 1rem 0;
     padding: 1rem;
-  }
-
-  h1 {
-    text-align: center;
-    padding: 1rem;
-    color: $dark-smooth;
+    box-shadow: 2px 2px 2px rgba(2, 100, 18, 0.3);
+    background-color: $main-too-color;
+    border-radius: 0.4rem;
   }
 
   &__img {
@@ -116,6 +119,9 @@
 
 @media (min-width: 768px) {
   .coursesPage {
+    &__text {
+      font-size: 2rem;
+    }
     &__status {
       flex-direction: row;
       flex-wrap: wrap;
@@ -127,7 +133,7 @@
       }
 
       &Price {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
       &Labelo {

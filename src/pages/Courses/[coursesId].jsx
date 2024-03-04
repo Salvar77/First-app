@@ -63,9 +63,6 @@ const CoursesPage = () => {
 
         <div>
           <p className={classes.coursesPage__text}>{course.description}</p>
-
-          <br></br>
-          <br></br>
           <p className={classes.coursesPage__text}>{course.description}</p>
           <Image
             src={course.image}
@@ -74,8 +71,6 @@ const CoursesPage = () => {
             height={300}
             className={classes.coursesPage__img}
           ></Image>
-          <br></br>
-          <br></br>
           <p className={classes.coursesPage__text}> {course.description}</p>
         </div>
       </div>
