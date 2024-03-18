@@ -23,31 +23,19 @@ const AboutMe = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const heroSection = document.getElementById("about");
-      const viewportHeight = window.innerHeight;
-      heroSection.style.height = `${viewportHeight}px`;
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <>
-      <div className={styles.background}>
-        <Image
-          src={currentImage} // Dynamicznie zmieniające się źródło obrazu
-          alt="Tło sekcji O mnie"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-        />
-      </div>
       <section id="about" className={styles.aboutMe}>
+        <div className={styles.aboutMe__background}>
+          <Image
+            src={currentImage} // Dynamicznie zmieniające się źródło obrazu
+            alt="Tło sekcji O mnie"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority
+          />
+        </div>
         <div className={styles.aboutMe__image}>
           <Image
             src={AboutMePicture}
