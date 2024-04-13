@@ -17,10 +17,6 @@ const ContactPage = () => {
   const [message, setMessage] = useState("");
   const [currentImage, setCurrentImage] = useState(heroImageMobile);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 992px)");
 
@@ -36,32 +32,22 @@ const ContactPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const heroSection = document.getElementById("contactPage");
-      const viewportHeight = window.innerHeight;
-      heroSection.style.height = `${viewportHeight}px`;
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Logika przetwarzania formularza
+  };
 
   return (
     <>
-      <div>
+      <div id="contactPage" className={styles.contactSection}>
         <Image
-          src={currentImage} // Dynamicznie zmieniające się źródło obrazu
-          alt="Tło sekcji O mnie"
+          src={currentImage}
+          alt="Tło sekcji Kontakt"
           layout="fill"
           objectFit="cover"
-          quality={100} // Możesz dostosować jakość obrazu
+          quality={100}
           priority
         />
-      </div>
-      <section id="contactPage" className={styles.contactSection}>
         <div className={styles.contactInfo}>
           <h2>Kontakt</h2>
           {contactData.map((data, index) => (
@@ -93,22 +79,9 @@ const ContactPage = () => {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <button type="submit" className={styles.btn}>
-            <i className={styles.animation}></i>
             Wyślij
-            <i className={styles.animation}></i>
           </button>
         </form>
-      </section>
-      <div className={styles.textMe}>
-        <h2>Napisz do mnie</h2>
-        <a
-          href="https://www.gmail.com/TwojaNazwaUzytkownika"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fas fa-envelope"></i>
-        </a>
-        <p>lukaszkus77@gmail.com</p>
       </div>
     </>
   );
