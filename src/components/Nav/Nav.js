@@ -17,7 +17,7 @@ const Nav = ({ isOpen, toggleMenu, toggleShopCart, shopCart }) => {
         <div className={classes.nav__items}>
           <ul aria-hidden onClick={toggleMenu} className={classes.menu}>
             <li>
-              <Link href="#">Home</Link>
+              <Link href="/#hero">Home</Link>
             </li>
             <li>
               <Link href="/#AboutMe">Nagowie</Link>

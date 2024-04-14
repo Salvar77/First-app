@@ -11,21 +11,21 @@ const reviewsData = [
     id: "review1",
     image: picture1,
     description:
-      "Zakupiłam niedawno kilka pamiątek ozdobnych z NGE i muszę przyznać, że jestem zachwycona! Każdy przedmiot jest wykonany z niezwykłą dbałością o szczegóły, a unikalne wzornictwo sprawia, że są to nie tylko dekoracje, ale także piękne wspomnienia, które zdobią mój dom. Obsługa klienta była wyjątkowa, a wszystko dotarło do mnie szybko i w idealnym stanie. Z pewnością będę wracać po więcej!",
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     title: "Anna Kowalska",
   },
   {
     id: "review2",
     image: picture2,
     description:
-      "Zakupy w NGE to czysta przyjemność! Koszulka, którą zamówiłem, przyszła szybciej niż się spodziewałem i jakość jest po prostu niesamowita. Widać, że dbają o każdy szczegół. Na pewno tu wrócę po więcej!",
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     title: "Norman Nowak",
   },
   {
     id: "review3",
     image: picture3,
     description:
-      "Kupiłem koszulkę jako prezent i byłem pod ogromnym wrażeniem poziomu obsługi klienta. Ekipa z NGE zrobiła wszystko, by prezent był wyjątkowy, włącznie z pięknym opakowaniem. Prezent był hitem!",
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     title: "Janusz Polański",
   },
 ];

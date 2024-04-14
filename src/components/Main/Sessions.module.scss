@@ -6,6 +6,7 @@
   align-items: center;
   padding-top: 1rem;
   padding: 1rem;
+  margin: 1.6rem;
   background-color: $new-background;
 
   h2 {
@@ -15,7 +16,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   &__text {
