@@ -4,11 +4,11 @@ import HorizontalLine from "../Horizontal Line/HorizontalLine";
 const AdditionalSection = () => {
   return (
     <section id="about" className={styles.additionalSection}>
-      <div>
+      <div className={styles.fas}>
         <i className="fas fa-quote-right"></i>
       </div>
       <p className={styles.additionalSection__text}>&quot;Naja&quot;</p>
-      <div>
+      <div className={styles.fas}>
         <i className="fas fa-quote-right"></i>
       </div>
 

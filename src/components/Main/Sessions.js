@@ -8,7 +8,7 @@ export const sessionsData = [
     image: "/buddha_640.jpg",
     description:
       "W naszym asortymencie znajdziesz posążki przedstawiające różnorodne bóstwa hinduistyczne, takie jak: Ganesha - bóg mądrości, usuwający przeszkody, patron nauki i pisarzy, często czczony jako pierwszy przed rozpoczęciem nowych przedsięwzięć. Lakshmi - bogini pomyślności, bogactwa, czystości i hojności, a także uosobienie piękna i uroku. Shiva - niszczyciel zła i transformator, przedstawiany jako źródło dobra i opiekun medytacji i sztuk. Krishna - bóg miłości, współczucia i dobroci, znany z Bhagawadgity jako duchowy mentor Arjuny. Saraswati - bogini wiedzy, muzyki, sztuki i mądrości, inspirująca uczących się i poszukujących duchowego rozwoju.	",
-    title: "Sesja Online",
+    title: "Posążki ozdobne",
     amount: "50",
   },
   {
@@ -16,7 +16,7 @@ export const sessionsData = [
     image: "/cobra_640.jpg",
     description:
       "Autentyczność: Każdy posążek jest wykonany z należytą starannością i uwagą do detali, zachowując autentyczność i duchowość. Rękodzieło: Nasze produkty są ręcznie robione przez wykwalifikowanych rzemieślników, co nadaje im unikalny charakter. Jakość Materiałów: Używamy tylko najlepszej jakości materiałów, takich jak brąz, marmur, mosiądz i kamień, aby zapewnić trwałość i estetyczne piękno. Duchowość: Posążki te nie tylko ozdobią Twój dom, ale mogą również służyć jako przedmioty kultu w domowym sanktuarium, przynosząc pokój i harmonię. Idealny Prezent: Doskonały wybór na prezent dla bliskich, którzy cenią duchowość i kulturę indyjską, czy to z okazji świąt, urodzin, czy jako symbol szczęścia i dobrobytu.",
-    title: "Sesja Całościowa",
+    title: "Posążki ozdobne",
     amount: "100",
   },
   {
@@ -24,7 +24,7 @@ export const sessionsData = [
     image: "/buddha_640.jpg",
     description:
       "Naszym celem jest dostarczanie produktów, które nie tylko są piękne wizualnie, ale także mają głębokie znaczenie duchowe. Zapraszamy do przeglądania naszej kolekcji i odkrywania piękna i spokoju, jakie mogą przynieść do Twojego życia te wyjątkowe dzieła sztuki.",
-    title: "Sesja Odczyt Kart Tarota",
+    title: "Posążki ozdobne",
     amount: "150",
   },
 ];

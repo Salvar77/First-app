@@ -10,7 +10,7 @@
   background-color: $new-background;
 
   h2 {
-    color: $main-too-color;
+    color: $white-smooth;
   }
 
   &__box {
@@ -21,7 +21,7 @@
 
   &__text {
     text-align: center;
-    color: $new-background;
+    color: $white-smooth;
     padding: 0.6rem;
   }
 
@@ -46,8 +46,8 @@
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.6rem;
-    background-color: $secondary-color;
-    color: $dark-smooth;
+    background-color: $new-background-hover;
+    color: $white-smooth;
     cursor: pointer;
     transition: 0.3s;
 
