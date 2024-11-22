@@ -12,8 +12,8 @@ const ReviewsPage = () => {
               <Image
                 src="/dragon_640.jpg"
                 alt="opinie"
-                width={500} // your desired width
-                height={300} // your desired height
+                width={500}
+                height={300}
               />
             </div>
           ))}

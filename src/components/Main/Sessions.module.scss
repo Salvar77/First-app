@@ -59,7 +59,7 @@
   &__container {
     width: 100%;
     text-align: center;
-    margin-bottom: 1rem; // Dodaje odstęp między tytułem a zawartością
+    margin-bottom: 1rem;
   }
 
   &__wrapper {
@@ -69,29 +69,7 @@
 
     @media (min-width: 768px) {
       flex-direction: row;
-      justify-content: center; // Rozmieszcza zawartość równo
-      // flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
-
-// @media (min-width: 768px) {
-//     .sessions {
-//         flex-direction: row;
-//         // align-items: flex-start;
-//         order: -1;
-
-//         &__box {
-//             display: flex;
-//             flex-direction: row;
-//         }
-//     }
-
-//     .sessions__container {
-// 		// display: flex;
-// 		// justify-content: center; // Ustawia kursy obok siebie w poziomie
-// 		text-align: center;
-// 		width: 100%;
-// 		// flex-wrap: wrap;
-// 	}
-// }

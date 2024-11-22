@@ -34,7 +34,6 @@ const ContactPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Logika przetwarzania formularza
   };
 
   return (

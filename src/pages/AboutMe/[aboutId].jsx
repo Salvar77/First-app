@@ -28,7 +28,7 @@ const AboutMe = () => {
       <section id="about" className={styles.aboutMe}>
         <div className={styles.aboutMe__background}>
           <Image
-            src={currentImage} // Dynamicznie zmieniające się źródło obrazu
+            src={currentImage}
             alt="Tło sekcji O mnie"
             layout="fill"
             objectFit="cover"

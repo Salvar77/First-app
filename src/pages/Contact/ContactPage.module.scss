@@ -1,18 +1,14 @@
 @import "../../styles/colors";
 
 .contactSection {
-  // position: relative;
   display: grid;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  // padding-top: 6rem;
   height: 90vh;
   background-color: $new-background;
   max-width: 1400px;
   margin: 0 auto;
-  // margin-left: auto;
-  // margin-right: auto;
   padding-top: 10vh;
   color: $new-color;
 
@@ -63,7 +59,6 @@
     justify-content: center;
     align-items: center;
     border-top: 3px solid black;
-    // border-left: 3px solid black;
     box-shadow: 2px 2px 2px rgba(51, 170, 87, 0.2);
     background-color: $main-color;
     min-width: 100%;
@@ -71,9 +66,6 @@
     margin-bottom: 2rem;
     max-width: 100%;
     border-radius: 0.6rem;
-
-    // width: min(90%,400px);
-    // width: 100%;
 
     &__header {
       display: flex;
@@ -96,8 +88,8 @@
 .contactInfo,
 .contactForm,
 .textMe {
-  z-index: 2; // Upewnij się, że są na wierzchu tła
-  position: relative; // z-index działa tylko na elementach pozycjonowanych
+  z-index: 2;
+  position: relative;
 }
 
 .btn {
@@ -162,8 +154,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
-    width: 100%; // Dodaj szerokość dla sekcji
-    margin: 0 auto; // Wyśrodkuj sekcję
+    width: 100%;
+    margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
     padding-top: 15vh;

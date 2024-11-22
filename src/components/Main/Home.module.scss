@@ -9,11 +9,10 @@
   z-index: 20;
 
   &__boxText {
-    // text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.9); // Półprzezroczyste białe tło
+    background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     border-radius: 0.4rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -31,34 +30,9 @@
   }
   &__img {
     max-width: 100%;
-    // height: auto;
     padding: 1rem 1rem;
     border-radius: 2rem;
   }
-
-  // &__btn {
-  //   // font-family: "Alkatra";
-  //   display: inline-block;
-  //   // width: auto;
-  //   // text-align: center;
-  //   margin: 0 auto;
-  //   padding: 1rem 1.6rem;
-  //   font-size: 1.4rem;
-  //   transition: background-color 0.3s;
-  //   border-radius: 0.6rem;
-  //   // opacity: 0.6;
-  //   color: $white-smooth;
-  //   background-color: $new-p-color;
-  //   box-shadow: 0.4rem 0.6rem 0.8rem;
-  //   // border: none;
-  //   transition: 0.5s;
-  //   text-decoration: none;
-
-  //   &:hover {
-  //     box-shadow: 0.3rem 0.4rem 0 0 rgba(175, 132, 23, 0.8),
-  //       inset 0.8rem 0.4rem 0.8rem rgba(167, 99, 10, 0.711);
-  //   }
-  // }
 }
 
 .btn {
@@ -109,12 +83,7 @@
 
 .aboutMe__img img {
   object-fit: cover;
-  // height: 100%; // zajmuje 100% dostępnej wysokości kontenera
 }
-
-// .aboutMe, .aboutMe * {
-//     border: 1px solid red; // Tylko do celów diagnostycznych
-// }
 
 .sectionHeading {
   font-size: 2rem;
@@ -146,7 +115,7 @@
     gap: 2rem;
 
     &__img {
-      width: 30rem; // Przykładowa wartość
+      width: 30rem;
       max-width: none;
       margin-left: 2rem;
     }
