@@ -40,16 +40,15 @@ const Hero = () => {
     <section id="hero" className={classes.hero}>
       <div>
         <Image
-          src={backgroundImage} // Dynamicznie zmieniające się źródło obrazu
+          src={backgroundImage}
           alt="Tło sekcji O mnie"
           layout="fill"
           objectFit="cover"
-          quality={100} // Możesz dostosować jakość obrazu
+          quality={100}
           priority
         />
       </div>
       <div className={classes.hero__background}></div>{" "}
-      {/* Tutaj dodajemy zamknięcie tagu */}
       <div className={classes.textOverlay}>
         <h1 className={classes.hero__title}>The Nagas Journey</h1>
         <p>Posążki ozdobne / Koszulki: Nagowie</p>
